@@ -1,0 +1,28 @@
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.exe
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.deps.json
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.runtimeconfig.json
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.runtimeconfig.dev.json
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\ref\Web Scraping.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Web Scraping.pdb
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\HtmlAgilityPack.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\WebDriver.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\staticwebassets\Web Scraping.StaticWebAssets.Manifest.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\staticwebassets\Web Scraping.StaticWebAssets.xml
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\scopedcss\bundle\Web Scraping.styles.css
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.RazorTargetAssemblyInfo.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\ref\Web Scraping.dll
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.pdb
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.genruntimeconfig.cache
