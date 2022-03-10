@@ -5,6 +5,7 @@ namespace ProjectV1.DAL
 {
     public class Player
     {
+       //Entitatea pentru jucator
         public int Id { get; set; }
         [Required]
         public string FirstName { get; set; }
