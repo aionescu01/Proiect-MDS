@@ -19,11 +19,10 @@ C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\staticwebassets\Web Scraping.StaticWebAssets.Manifest.cache
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\staticwebassets\Web Scraping.StaticWebAssets.xml
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\scopedcss\bundle\Web Scraping.styles.css
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.RazorTargetAssemblyInfo.cache
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.dll
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\ref\Web Scraping.dll
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.pdb
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.genruntimeconfig.cache
-C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.csproj.AssemblyReference.cache
-C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.csproj.CopyComplete

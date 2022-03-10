@@ -1,23 +1,31 @@
-Ederson €50.00m Goalkeeper age 28 Brazil
-Zack Steffen €6.00m Goalkeeper age 26 United States
-Scott Carson €300Th. Goalkeeper age 36 England
-Rúben Dias €75.00m Centre-Back age 24 Portugal
-Aymeric Laporte €45.00m Centre-Back age 27 Spain
-John Stones €28.00m Centre-Back age 27 England
-Nathan Aké €28.00m Centre-Back age 27 Netherlands
-Oleksandr Zinchenko €25.00m Left-Back age 25 Ukraine
-Benjamin Mendy €10.00m Left-Back age 27 France
-João Cancelo €60.00m Right-Back age 27 Portugal
-Kyle Walker €25.00m Right-Back age 31 England
-Rodri €70.00m Defensive Midfield age 25 Spain
-Fernandinho €2.00m Defensive Midfield age 36 Brazil
-Phil Foden €85.00m Central Midfield age 21 England
-Ilkay Gündogan €35.00m Central Midfield age 31 Germany
-Kevin De Bruyne €90.00m Attacking Midfield age 30 Belgium
-Bernardo Silva €75.00m Attacking Midfield age 27 Portugal
-Cole Palmer €3.00m Attacking Midfield age 19 England
-Raheem Sterling €85.00m Left Winger age 27 England
-Jack Grealish €80.00m Left Winger age 26 England
-Riyad Mahrez €40.00m Right Winger age 31 Algeria
-Kayky €14.00m Right Winger age 18 Brazil
-Gabriel Jesus €60.00m Centre-Forward age 24 Brazil
+Marc-André ter Stegen €45.00m Goalkeeper
+Neto €4.00m Goalkeeper
+Arnau Tenas €1.50m Goalkeeper
+Ronald Araújo €35.00m Centre-Back
+Eric García €18.00m Centre-Back
+Clément Lenglet €14.00m Centre-Back
+Óscar Mingueza €9.00m Centre-Back
+Gerard Piqué €5.00m Centre-Back
+Samuel Umtiti €2.00m Centre-Back
+Jordi Alba €12.00m Left-Back
+Álex Balde €5.00m Left-Back
+Sergiño Dest €18.00m Right-Back
+Moussa Wagué €2.00m Right-Back
+Dani Alves €1.00m Right-Back
+Sergio Busquets €9.00m Defensive Midfield
+Pedri €80.00m Central Midfield
+Frenkie de Jong €70.00m Central Midfield
+Gavi €40.00m Central Midfield
+Nico González €20.00m Central Midfield
+Riqui Puig €9.00m Central Midfield
+Sergi Roberto €9.00m Central Midfield
+Ansu Fati €60.00m Left Winger
+Ez Abde €8.00m Left Winger
+Ferran Jutglà €1.00m Left Winger
+Ferran Torres €45.00m Right Winger
+Ousmane Dembélé €30.00m Right Winger
+Adama Traoré €28.00m Right Winger
+Memphis Depay €45.00m Centre-Forward
+Pierre-Emerick Aubameyang €15.00m Centre-Forward
+Martin Braithwaite €7.50m Centre-Forward
+Luuk de Jong €4.00m Centre-Forward

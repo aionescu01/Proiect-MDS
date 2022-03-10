@@ -18,7 +18,7 @@ namespace WebScraper
             {
                 foreach (var i in data) 
                 { 
-                    writetext.WriteLine(i.name+" "+i.value+" "+ i.position+" age "+i.age+" "+i.nationality);
+                    writetext.WriteLine(i.name+" "+i.value+" "+ i.position);
                     //System.Console.WriteLine(i);
                 }
             }
@@ -34,12 +34,12 @@ namespace WebScraper
             options.AddArguments("headless");
 
             var chrome = new ChromeDriver(options);
-            //chrome.Navigate().GoToUrl("https://www.transfermarkt.com/fc-barcelona/kader/verein/131/saison_id/2021/plus/1");
-            chrome.Navigate().GoToUrl("https://www.transfermarkt.com/manchester-city/kader/verein/281/saison_id/2021/plus/1"); 
+            chrome.Navigate().GoToUrl("https://www.transfermarkt.com/fc-barcelona/kader/verein/131/saison_id/2021/plus/1");
+
             return chrome.PageSource;
         }
 
-        private static List<(string name, string value, string position, string age, string nationality)> ParseHtmlUsingHtmlAgilityPack(string html)
+        private static List<(string name, string value, string position)> ParseHtmlUsingHtmlAgilityPack(string html)
         {
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
@@ -51,23 +51,14 @@ namespace WebScraper
 
 
 
-            List<(string name, string value, string position, string age, string nationality)> data = new();
+            List<(string name, string value, string position)> data = new();
 
             foreach (var repo in repositories)
             {
                 var name = repo.SelectSingleNode(".//td[@class='hauptlink']/a").InnerText;
                 var value = repo.SelectSingleNode(".//td[@class='rechts hauptlink']").InnerText;
                 var position = repo.SelectSingleNode(".//table[@class='inline-table']/tbody/tr[2]").InnerText;
-                var age = repo.SelectSingleNode(".//td[@class='zentriert']").InnerText;
-                var node = repo.SelectNodes(".//td[@class='zentriert']");
-                var country = node[1].InnerHtml;
-                int first = country.IndexOf("title=") + "title=".Length + 1;
-                int end = country.Substring(first).IndexOf('"');
-                var nationality = country.Substring(first, end);
-                first = age.IndexOf("(") + "(".Length;
-                end = age.Substring(first).IndexOf(')');
-                age = age.Substring(first, end);
-                //System.Console.WriteLine(age.Substring(first, end));
+                //System.Console.WriteLine(position);
                 name = name.Replace("\r\n", "");
                 name = name.Replace("&nbsp;", "");
                 name = name.TrimStart(' ');
@@ -76,7 +67,7 @@ namespace WebScraper
                 position = position.Replace("&nbsp;", "");
                 position = position.TrimStart(' ');
                 position = position.TrimEnd(' ');
-                data.Add((name, value, position, age, nationality));
+                data.Add((name, value, position));
 
             }
 
