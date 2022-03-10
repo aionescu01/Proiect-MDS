@@ -1,0 +1,15 @@
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ProjectV1.DAL.deps.json
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ProjectV1.DAL.runtimeconfig.json
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ProjectV1.DAL.runtimeconfig.dev.json
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ProjectV1.DAL.dll
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ref\ProjectV1.DAL.dll
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\bin\Debug\net5.0\ProjectV1.DAL.pdb
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.dll
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ref\ProjectV1.DAL.dll
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.pdb
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.genruntimeconfig.cache
