@@ -49,11 +49,23 @@ namespace ProjectV1.Controllers
             return Ok(players);
         }
         [HttpGet("get-by-name/{name}")]
-        public async Task<IActionResult> GetDriverById(int id)
+        public async Task<IActionResult> GetDriverById(string name)
         {
-            var driver = await _context.Drivers.Select(DriverGetModel.Projection).FirstOrDefaultAsync(driver => driver.Number == id);
-            return Ok(driver);
+            //System.Console.WriteLine()
+            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.LastName == name);
+            //var player = await _context.Players.FirstOrDefaultAsync(player => player.LastName == name);
+            return Ok(player);
         }
 
+        [HttpDelete("delete-by-id/{id}")]
+        public async Task<IActionResult> DeletePlayer(int id)
+        {
+            var player = await _context.Players.FirstOrDefaultAsync(player => player.Id == id);
+
+            _context.Players.Remove(player);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }

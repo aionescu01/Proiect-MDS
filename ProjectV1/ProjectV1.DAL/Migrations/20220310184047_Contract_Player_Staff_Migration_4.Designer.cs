@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectV1.DAL;
 
 namespace ProjectV1.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220310184047_Contract_Player_Staff_Migration_4")]
+    partial class Contract_Player_Staff_Migration_4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,13 +34,13 @@ namespace ProjectV1.DAL.Migrations
                     b.Property<DateTime>("End_date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PlayerId")
+                    b.Property<int>("PlayerId")
                         .HasColumnType("int");
 
                     b.Property<int>("Salary")
                         .HasColumnType("int");
 
-                    b.Property<int?>("StaffMemberId")
+                    b.Property<int>("StaffMemberId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Start_date")
@@ -130,11 +132,15 @@ namespace ProjectV1.DAL.Migrations
                 {
                     b.HasOne("ProjectV1.DAL.Entities.Player", "Player")
                         .WithMany()
-                        .HasForeignKey("PlayerId");
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ProjectV1.DAL.Entities.StaffMember", "StaffMember")
                         .WithMany()
-                        .HasForeignKey("StaffMemberId");
+                        .HasForeignKey("StaffMemberId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Player");
 

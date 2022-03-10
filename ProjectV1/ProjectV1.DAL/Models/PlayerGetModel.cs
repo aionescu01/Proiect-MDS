@@ -9,20 +9,25 @@ namespace ProjectV1.DAL.Models
 {
     public class PlayerGetModel
     {
+        public string LastName;
+
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Nationality { get; set; }
         public DateTime Birth_Date { get; set; }
-        public float Height { get; set; }
+        public string Height { get; set; }
         public string Foot { get; set; }
         public string Position { get; set; }
 
 
         public static Expression<Func<Entities.Player, PlayerGetModel>> Projection => player => new PlayerGetModel()
         {
+            Id = player.Id,
+            LastName = player.LastName,
             Name = $"{player.FirstName} {player.LastName}",
             Nationality = player.Nationality,
             Birth_Date = player.Birth_Date,
-            Height = player.Height,
+            Height = $"{player.Height} m",
             Foot = player.Foot,
             Position = player.Position
         };
