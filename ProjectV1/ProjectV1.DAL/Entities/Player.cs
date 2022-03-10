@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ProjectV1.DAL
+namespace ProjectV1.DAL.Entities
 {
     public class Player
     {
