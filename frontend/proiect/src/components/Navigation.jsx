@@ -29,3 +29,4 @@ function Navigation() {
     </div>
   );
 }
+export default Navigation;
