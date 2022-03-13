@@ -18,5 +18,8 @@ namespace ProjectV1.DAL.Entities
 
         public virtual Stadium Stadium { get; set; }
 
+        public virtual ICollection<MatchPlayer> MatchPlayers { get; set; }
+        public virtual ICollection<MatchStaff> MatchStaffs { get; set; }
+
     }
 }
