@@ -17,6 +17,9 @@ namespace ProjectV1.DAL
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<StaffMember> Staff{ get; set; }
 
+        public DbSet<Stadium> Stadiums { get; set; }
+        public DbSet<Match> Matches { get; set; }
+
         /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
