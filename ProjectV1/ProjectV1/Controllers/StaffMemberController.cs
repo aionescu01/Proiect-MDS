@@ -27,8 +27,9 @@ namespace ProjectV1.Controllers
         {
             var staffmember = new StaffMember()
             {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
+                //FirstName = model.FirstName,
+                //LastName = model.LastName,
+                Name = model.Name,
                 Role = model.Role,
                 Birth_Date = model.Birth_Date,
                 Email = model.Email,

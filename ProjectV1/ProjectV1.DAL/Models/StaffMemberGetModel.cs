@@ -21,8 +21,9 @@ namespace ProjectV1.DAL.Models
     public static Expression<Func<Entities.StaffMember, StaffMemberGetModel>> Projection => staffmember => new StaffMemberGetModel()
     {
         Id = staffmember.Id,
-        LastName = staffmember.LastName,
-        Name = $"{staffmember.FirstName} {staffmember.LastName}",
+        //LastName = staffmember.LastName,
+        //Name = $"{staffmember.FirstName} {staffmember.LastName}",
+        Name = staffmember.Name,
         Role = staffmember.Role,
         Birth_Date = staffmember.Birth_Date,
         Email = staffmember.Email,

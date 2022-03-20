@@ -5372,19 +5372,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\alexa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
       "projectName": "ProjectV1.DAL",
-      "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+      "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

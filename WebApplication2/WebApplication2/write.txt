@@ -1,23 +1,26 @@
-Ederson €50.00m Goalkeeper age 28 Brazil
-Zack Steffen €6.00m Goalkeeper age 26 United States
-Scott Carson €300Th. Goalkeeper age 36 England
-Rúben Dias €75.00m Centre-Back age 24 Portugal
-Aymeric Laporte €45.00m Centre-Back age 27 Spain
-John Stones €28.00m Centre-Back age 27 England
-Nathan Aké €28.00m Centre-Back age 27 Netherlands
-Oleksandr Zinchenko €25.00m Left-Back age 25 Ukraine
-Benjamin Mendy €10.00m Left-Back age 27 France
-João Cancelo €60.00m Right-Back age 27 Portugal
-Kyle Walker €25.00m Right-Back age 31 England
-Rodri €70.00m Defensive Midfield age 25 Spain
-Fernandinho €2.00m Defensive Midfield age 36 Brazil
-Phil Foden €85.00m Central Midfield age 21 England
-Ilkay Gündogan €35.00m Central Midfield age 31 Germany
-Kevin De Bruyne €90.00m Attacking Midfield age 30 Belgium
-Bernardo Silva €75.00m Attacking Midfield age 27 Portugal
-Cole Palmer €3.00m Attacking Midfield age 19 England
-Raheem Sterling €85.00m Left Winger age 27 England
-Jack Grealish €80.00m Left Winger age 26 England
-Riyad Mahrez €40.00m Right Winger age 31 Algeria
-Kayky €14.00m Right Winger age 18 Brazil
-Gabriel Jesus €60.00m Centre-Forward age 24 Brazil
+Manuel Neuer 14 Goalkeeper born 27-Mar-86 00:00:00 Germany 1.93m right
+Sven Ulreich 0.9 Goalkeeper born 03-Aug-88 00:00:00 Germany 1.92m right
+Christian Früchtl 0.6 Goalkeeper born 28-Jan-00 00:00:00 Germany 1.93m left
+Dayot Upamecano 55 Centre-Back born 27-Oct-98 00:00:00 France 1.86m right
+Lucas Hernández 50 Centre-Back born 14-Feb-96 00:00:00 France 1.84m left
+Niklas Süle 35 Centre-Back born 03-Sep-95 00:00:00 Germany 1.95m right
+Tanguy Nianzou 11 Centre-Back born 07-Jun-02 00:00:00 France 1.91m right
+Alphonso Davies 70 Left-Back born 02-Nov-00 00:00:00 Canada 1.83m left
+Omar Richards 7 Left-Back born 15-Feb-98 00:00:00 England 1.74m left
+Benjamin Pavard 30 Right-Back born 28-Mar-96 00:00:00 France 1.86m right
+Josip Stanisic 4 Right-Back born 02-Apr-00 00:00:00 Croatia 1.87m both
+Bouna Sarr 3 Right-Back born 31-Jan-92 00:00:00 Senegal 1.77m right
+Joshua Kimmich 85 Defensive Midfield born 08-Feb-95 00:00:00 Germany 1.77m right
+Marc Roca 7 Defensive Midfield born 26-Nov-96 00:00:00 Spain 1.84m left
+Leon Goretzka 70 Central Midfield born 06-Feb-95 00:00:00 Germany 1.89m right
+Marcel Sabitzer 27 Central Midfield born 17-Mar-94 00:00:00 Austria 1.77m right
+Corentin Tolisso 15 Central Midfield born 03-Aug-94 00:00:00 France 1.81m right
+Jamal Musiala 55 Attacking Midfield born 26-Feb-03 00:00:00 Germany 1.83m right
+Malik Tillman 1.5 Attacking Midfield born 28-May-02 00:00:00 Germany 1.87m right
+Paul Wanner 0.75 Attacking Midfield born 23-Dec-05 00:00:00 Germany 1.85m left
+Leroy Sané 70 Left Winger born 11-Jan-96 00:00:00 Germany 1.83m left
+Serge Gnabry 70 Right Winger born 14-Jul-95 00:00:00 Germany 1.76m right
+Kingsley Coman 55 Right Winger born 13-Jun-96 00:00:00 France 1.80m right
+Thomas Müller 25 Second Striker born 13-Sep-89 00:00:00 Germany 1.85m right
+Robert Lewandowski 50 Centre-Forward born 21-Aug-88 00:00:00 Poland 1.85m right
+Eric Maxim Choupo-Moting 3.5 Centre-Forward born 23-Mar-89 00:00:00 Cameroon 1.91m right

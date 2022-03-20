@@ -129,10 +129,6 @@ namespace ProjectV1.DAL.Migrations
                     b.Property<DateTime>("Birth_Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Foot")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -140,7 +136,7 @@ namespace ProjectV1.DAL.Migrations
                     b.Property<float>("Height")
                         .HasColumnType("real");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -151,6 +147,9 @@ namespace ProjectV1.DAL.Migrations
                     b.Property<string>("Position")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -195,11 +194,7 @@ namespace ProjectV1.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

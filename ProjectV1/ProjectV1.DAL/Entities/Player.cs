@@ -11,13 +11,16 @@ namespace ProjectV1.DAL.Entities
     {
         public int Id { get; set; }
         [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string LastName { get; set; }
+        public string Name { get; set; }
+        //[Required]
+        //public string FirstName { get; set; }
+        //[Required]
+        //public string LastName { get; set; }
         [Required]
         public string Nationality { get; set; }
         public DateTime Birth_Date { get; set; }
         public float Height { get; set; }
+        public decimal Value { get; set; }
         [Required]
         public string Foot { get; set; }
         [Required]

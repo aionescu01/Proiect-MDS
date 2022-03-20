@@ -8,8 +8,9 @@ namespace ProjectV1.DAL.Models
 {
     public class StaffMemberPostModel
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Name { get; set; }
+        //public string FirstName { get; set; }
+        //public string LastName { get; set; }
         public string Role { get; set; }
         public DateTime Birth_Date { get; set; }
         public string Email { get; set; }

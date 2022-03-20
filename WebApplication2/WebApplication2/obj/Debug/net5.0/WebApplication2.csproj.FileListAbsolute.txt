@@ -26,4 +26,4 @@ C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\Web Scraping.pdb
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.genruntimeconfig.cache
 C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.csproj.AssemblyReference.cache
-C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\WebApplication2.csproj.CopyComplete
+C:\Users\alexa\Desktop\Proiect-MDS\WebApplication2\WebApplication2\obj\Debug\net5.0\staticwebassets\Web Scraping.StaticWebAssets.xml
