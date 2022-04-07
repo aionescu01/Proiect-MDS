@@ -50,11 +50,15 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[98.0.4758.10200, )"
+              "version": "[100.0.4896.6000, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "WebDriverManager": {
+              "target": "Package",
+              "version": "[2.12.4, )"
             }
           },
           "imports": [

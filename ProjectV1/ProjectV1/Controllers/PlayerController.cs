@@ -198,13 +198,14 @@ namespace ProjectV1.Controllers
                 }
 
 
-                //de adaugat 0. daca valoreaza sub 1 milion
                 data.Add((name, value, position, date_of_birth, nationality, height, foot));
 
             }
 
             return data;
         }
+
+
 
     }
 

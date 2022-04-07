@@ -1,26 +1,42 @@
-Manuel Neuer 14 Goalkeeper born 27-Mar-86 00:00:00 Germany 1.93m right
-Sven Ulreich 0.9 Goalkeeper born 03-Aug-88 00:00:00 Germany 1.92m right
-Christian Früchtl 0.6 Goalkeeper born 28-Jan-00 00:00:00 Germany 1.93m left
-Dayot Upamecano 55 Centre-Back born 27-Oct-98 00:00:00 France 1.86m right
-Lucas Hernández 50 Centre-Back born 14-Feb-96 00:00:00 France 1.84m left
-Niklas Süle 35 Centre-Back born 03-Sep-95 00:00:00 Germany 1.95m right
-Tanguy Nianzou 11 Centre-Back born 07-Jun-02 00:00:00 France 1.91m right
-Alphonso Davies 70 Left-Back born 02-Nov-00 00:00:00 Canada 1.83m left
-Omar Richards 7 Left-Back born 15-Feb-98 00:00:00 England 1.74m left
-Benjamin Pavard 30 Right-Back born 28-Mar-96 00:00:00 France 1.86m right
-Josip Stanisic 4 Right-Back born 02-Apr-00 00:00:00 Croatia 1.87m both
-Bouna Sarr 3 Right-Back born 31-Jan-92 00:00:00 Senegal 1.77m right
-Joshua Kimmich 85 Defensive Midfield born 08-Feb-95 00:00:00 Germany 1.77m right
-Marc Roca 7 Defensive Midfield born 26-Nov-96 00:00:00 Spain 1.84m left
-Leon Goretzka 70 Central Midfield born 06-Feb-95 00:00:00 Germany 1.89m right
-Marcel Sabitzer 27 Central Midfield born 17-Mar-94 00:00:00 Austria 1.77m right
-Corentin Tolisso 15 Central Midfield born 03-Aug-94 00:00:00 France 1.81m right
-Jamal Musiala 55 Attacking Midfield born 26-Feb-03 00:00:00 Germany 1.83m right
-Malik Tillman 1.5 Attacking Midfield born 28-May-02 00:00:00 Germany 1.87m right
-Paul Wanner 0.75 Attacking Midfield born 23-Dec-05 00:00:00 Germany 1.85m left
-Leroy Sané 70 Left Winger born 11-Jan-96 00:00:00 Germany 1.83m left
-Serge Gnabry 70 Right Winger born 14-Jul-95 00:00:00 Germany 1.76m right
-Kingsley Coman 55 Right Winger born 13-Jun-96 00:00:00 France 1.80m right
-Thomas Müller 25 Second Striker born 13-Sep-89 00:00:00 Germany 1.85m right
-Robert Lewandowski 50 Centre-Forward born 21-Aug-88 00:00:00 Poland 1.85m right
-Eric Maxim Choupo-Moting 3.5 Centre-Forward born 23-Mar-89 00:00:00 Cameroon 1.91m right
+Xavi Manager Nov 6, 2021 30.06.2024
+Óscar Hernández Assistant Manager Nov 8, 2021 30.06.2024
+Sergio Alegre Assistant Manager Nov 8, 2021 30.06.2024
+José de la Fuente Goalkeeping Coach Jul 1, 2012 -
+Lucas del Campo Conditioning Coach Sep 1, 2020 -
+Iván Torres Fitness Coach Nov 8, 2021 30.06.2024
+Joan Barbarà Technical Assistant Jul 1, 2021 -
+David Prats Match Analyst Nov 8, 2021 30.06.2024
+Toni Lobo Match Analyst Nov 8, 2021 30.06.2024
+Sergio García Opponent Analyst Nov 8, 2021 30.06.2024
+Mateu Alemany Chief Executive Officer Mar 26, 2021 30.06.2023
+Jordi Cruyff Adivser of management Aug 1, 2021 -
+Joan Laporta President Mar 7, 2021 -
+Rafael Yuste Vice-President Mar 7, 2021 -
+José Mari Bakero Head of Scouting Jul 1, 2021 -
+José Mari Bakero Head of Scouting Jul 1, 2021 -
+Urbano Ortega Scout Jul 1, 2011 -
+Miki Albert Scout Jul 1, 2011 -
+Carles Rexach Scout Jul 21, 2015 -
+Josep Moratalla Scout Jan 1, 2016 -
+Francesc Guitart Scout Jan 1, 2016 -
+Juan Carlos Rojo Scout Jun 2, 2018 -
+Jérôme Bigot Scout Sep 1, 2018 -
+Jon Andoni Goikoetxea Scout Jul 1, 2020 -
+Didac Soler Scout Aug 1, 2020 -
+José Manuel Barla Scout Sep 1, 2020 -
+Deco Scout Nov 8, 2021 -
+Albert Capellas Academy manager Jul 1, 2021 -
+Zigor Alexanco Academy manager Jul 1, 2021 -
+Toni Hernández Academy manager Jul 1, 2021 -
+Sergi Milà Base camp coordinator Jul 1, 2021 -
+José Mari Bakero Head of Youth Scouting Jul 1, 2021 -
+José Mari Bakero Head of Youth Scouting Jul 1, 2021 -
+Ricard Pruna Club Doctor Dec 15, 2021 30.06.2024
+Jordi Mesalles Physiotherapist Feb 1, 2014 -
+David Dias Couel Physiotherapist Sep 18, 2020 -
+Toni Tramullas Physiotherapist Nov 8, 2021 -
+Carlos Nogueira Physiotherapist Nov 8, 2021 30.06.2024
+Jaume Munill Physiotherapist Nov 8, 2021 -
+Silvia Tremoleda Nutritionist Jul 1, 2021 -
+Paco Seirul·lo Head of methodology May 1, 2014 -
+José Ramón Alexanko Academy Manager Apr 1, 2021 -

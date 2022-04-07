@@ -126,3 +126,4 @@ C:\Users\LENOVO\Documents\GitHub\Proiect-MDS\ProjectV1\ProjectV1\obj\Debug\net5.
 C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1\bin\Debug\net5.0\HtmlAgilityPack.dll
 C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1\bin\Debug\net5.0\WebDriver.dll
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1\obj\Debug\net5.0\ProjectV1.csproj.CopyComplete
