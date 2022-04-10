@@ -46,49 +46,80 @@ namespace ProjectV1.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PlayerId");
+                    b.HasIndex("PlayerId")
+                        .IsUnique()
+                        .HasFilter("[PlayerId] IS NOT NULL");
 
-                    b.HasIndex("StaffMemberId");
+                    b.HasIndex("StaffMemberId")
+                        .IsUnique()
+                        .HasFilter("[StaffMemberId] IS NOT NULL");
 
                     b.ToTable("Contracts");
                 });
 
-            modelBuilder.Entity("ProjectV1.DAL.Entities.StaffMember", b =>
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Match", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Birth_Date")
+                    b.Property<string>("Competition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Event_date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
+                    b.Property<string>("Opponent")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("Referee")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Phone_Number")
-                        .IsRequired()
+                    b.Property<string>("Score")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("StadiumId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Staff");
+                    b.HasIndex("StadiumId");
+
+                    b.ToTable("Matches");
                 });
 
-            modelBuilder.Entity("ProjectV1.DAL.Player", b =>
+            modelBuilder.Entity("ProjectV1.DAL.Entities.MatchPlayer", b =>
+                {
+                    b.Property<int?>("MatchId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PlayerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MatchId", "PlayerId");
+
+                    b.HasIndex("PlayerId");
+
+                    b.ToTable("MatchPlayers");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.MatchStaff", b =>
+                {
+                    b.Property<int?>("MatchId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("StaffMemberId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MatchId", "StaffMemberId");
+
+                    b.HasIndex("StaffMemberId");
+
+                    b.ToTable("MatchStaffs");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Player", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -117,28 +148,153 @@ namespace ProjectV1.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Players");
                 });
 
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Stadium", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surface")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stadiums");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.StaffMember", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Birth_Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone_Number")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Staff");
+                });
+
             modelBuilder.Entity("ProjectV1.DAL.Entities.Contract", b =>
                 {
-                    b.HasOne("ProjectV1.DAL.Player", "Player")
-                        .WithMany()
-                        .HasForeignKey("PlayerId");
+                    b.HasOne("ProjectV1.DAL.Entities.Player", "Player")
+                        .WithOne("Contract")
+                        .HasForeignKey("ProjectV1.DAL.Entities.Contract", "PlayerId");
 
                     b.HasOne("ProjectV1.DAL.Entities.StaffMember", "StaffMember")
-                        .WithMany()
-                        .HasForeignKey("StaffMemberId");
+                        .WithOne("Contract")
+                        .HasForeignKey("ProjectV1.DAL.Entities.Contract", "StaffMemberId");
 
                     b.Navigation("Player");
 
                     b.Navigation("StaffMember");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Match", b =>
+                {
+                    b.HasOne("ProjectV1.DAL.Entities.Stadium", "Stadium")
+                        .WithMany("Matches")
+                        .HasForeignKey("StadiumId");
+
+                    b.Navigation("Stadium");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.MatchPlayer", b =>
+                {
+                    b.HasOne("ProjectV1.DAL.Entities.Match", "Match")
+                        .WithMany("MatchPlayers")
+                        .HasForeignKey("MatchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectV1.DAL.Entities.Player", "Player")
+                        .WithMany("MatchPlayers")
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Match");
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.MatchStaff", b =>
+                {
+                    b.HasOne("ProjectV1.DAL.Entities.Match", "Match")
+                        .WithMany("MatchStaffs")
+                        .HasForeignKey("MatchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectV1.DAL.Entities.StaffMember", "StaffMember")
+                        .WithMany("MatchStaffs")
+                        .HasForeignKey("StaffMemberId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Match");
+
+                    b.Navigation("StaffMember");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Match", b =>
+                {
+                    b.Navigation("MatchPlayers");
+
+                    b.Navigation("MatchStaffs");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Player", b =>
+                {
+                    b.Navigation("Contract");
+
+                    b.Navigation("MatchPlayers");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.Stadium", b =>
+                {
+                    b.Navigation("Matches");
+                });
+
+            modelBuilder.Entity("ProjectV1.DAL.Entities.StaffMember", b =>
+                {
+                    b.Navigation("Contract");
+
+                    b.Navigation("MatchStaffs");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,23 +1,42 @@
-Ederson €50.00m Goalkeeper age 28 Brazil
-Zack Steffen €6.00m Goalkeeper age 26 United States
-Scott Carson €300Th. Goalkeeper age 36 England
-Rúben Dias €75.00m Centre-Back age 24 Portugal
-Aymeric Laporte €45.00m Centre-Back age 27 Spain
-John Stones €28.00m Centre-Back age 27 England
-Nathan Aké €28.00m Centre-Back age 27 Netherlands
-Oleksandr Zinchenko €25.00m Left-Back age 25 Ukraine
-Benjamin Mendy €10.00m Left-Back age 27 France
-João Cancelo €60.00m Right-Back age 27 Portugal
-Kyle Walker €25.00m Right-Back age 31 England
-Rodri €70.00m Defensive Midfield age 25 Spain
-Fernandinho €2.00m Defensive Midfield age 36 Brazil
-Phil Foden €85.00m Central Midfield age 21 England
-Ilkay Gündogan €35.00m Central Midfield age 31 Germany
-Kevin De Bruyne €90.00m Attacking Midfield age 30 Belgium
-Bernardo Silva €75.00m Attacking Midfield age 27 Portugal
-Cole Palmer €3.00m Attacking Midfield age 19 England
-Raheem Sterling €85.00m Left Winger age 27 England
-Jack Grealish €80.00m Left Winger age 26 England
-Riyad Mahrez €40.00m Right Winger age 31 Algeria
-Kayky €14.00m Right Winger age 18 Brazil
-Gabriel Jesus €60.00m Centre-Forward age 24 Brazil
+Xavi Manager Nov 6, 2021 30.06.2024
+Óscar Hernández Assistant Manager Nov 8, 2021 30.06.2024
+Sergio Alegre Assistant Manager Nov 8, 2021 30.06.2024
+José de la Fuente Goalkeeping Coach Jul 1, 2012 -
+Lucas del Campo Conditioning Coach Sep 1, 2020 -
+Iván Torres Fitness Coach Nov 8, 2021 30.06.2024
+Joan Barbarà Technical Assistant Jul 1, 2021 -
+David Prats Match Analyst Nov 8, 2021 30.06.2024
+Toni Lobo Match Analyst Nov 8, 2021 30.06.2024
+Sergio García Opponent Analyst Nov 8, 2021 30.06.2024
+Mateu Alemany Chief Executive Officer Mar 26, 2021 30.06.2023
+Jordi Cruyff Adivser of management Aug 1, 2021 -
+Joan Laporta President Mar 7, 2021 -
+Rafael Yuste Vice-President Mar 7, 2021 -
+José Mari Bakero Head of Scouting Jul 1, 2021 -
+José Mari Bakero Head of Scouting Jul 1, 2021 -
+Urbano Ortega Scout Jul 1, 2011 -
+Miki Albert Scout Jul 1, 2011 -
+Carles Rexach Scout Jul 21, 2015 -
+Josep Moratalla Scout Jan 1, 2016 -
+Francesc Guitart Scout Jan 1, 2016 -
+Juan Carlos Rojo Scout Jun 2, 2018 -
+Jérôme Bigot Scout Sep 1, 2018 -
+Jon Andoni Goikoetxea Scout Jul 1, 2020 -
+Didac Soler Scout Aug 1, 2020 -
+José Manuel Barla Scout Sep 1, 2020 -
+Deco Scout Nov 8, 2021 -
+Albert Capellas Academy manager Jul 1, 2021 -
+Zigor Alexanco Academy manager Jul 1, 2021 -
+Toni Hernández Academy manager Jul 1, 2021 -
+Sergi Milà Base camp coordinator Jul 1, 2021 -
+José Mari Bakero Head of Youth Scouting Jul 1, 2021 -
+José Mari Bakero Head of Youth Scouting Jul 1, 2021 -
+Ricard Pruna Club Doctor Dec 15, 2021 30.06.2024
+Jordi Mesalles Physiotherapist Feb 1, 2014 -
+David Dias Couel Physiotherapist Sep 18, 2020 -
+Toni Tramullas Physiotherapist Nov 8, 2021 -
+Carlos Nogueira Physiotherapist Nov 8, 2021 30.06.2024
+Jaume Munill Physiotherapist Nov 8, 2021 -
+Silvia Tremoleda Nutritionist Jul 1, 2021 -
+Paco Seirul·lo Head of methodology May 1, 2014 -
+José Ramón Alexanko Academy Manager Apr 1, 2021 -

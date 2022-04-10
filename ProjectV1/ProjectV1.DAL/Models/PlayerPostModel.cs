@@ -8,12 +8,15 @@ namespace ProjectV1.DAL.Models
 {
     public class PlayerPostModel
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Link { get; set; }
+        public string Name { get; set; }
+        //public string FirstName { get; set; }
+        //public string LastName { get; set; }
         public string Nationality { get; set; }
         public DateTime Birth_Date { get; set; }
         public float Height { get; set; }
         public string Foot { get; set; }
         public string Position { get; set; }
+        public decimal Value { get; set; }
     }
 }
