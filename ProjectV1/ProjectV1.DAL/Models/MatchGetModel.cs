@@ -9,7 +9,7 @@ namespace ProjectV1.DAL.Models
 {
     public class MatchGetModel
     {
-        public string opponent;
+
         public int Id { get; set; }
         public int? StadiumId { get; set; }
         public string Opponent { get; set; }
