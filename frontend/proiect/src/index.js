@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
     Navigation,
     Home,
+    Players,
   } from "./components";
 
   ReactDOM.render(
@@ -12,7 +13,7 @@ import {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/Players" element={<Players />} />
       </Routes>
     </Router>,
   
