@@ -30,7 +30,7 @@ namespace ProjectV1.Controllers
         {
             var match = new Match()
             {
-
+                StadiumId = model.StadiumId,
                 Opponent = model.Opponent,
                 Competition = model.Competition,
                 Event_date = model.Event_date,
@@ -55,7 +55,7 @@ namespace ProjectV1.Controllers
         [HttpGet("get-by-opponent/{opponent}")]
         public async Task<IActionResult> GetMatchesByOpponent(string opponent)
         {
-            var match = await _context.Matches.Select(MatchGetModel.Projection).FirstOrDefaultAsync(match => match.opponent == opponent);
+            var match = await _context.Matches.Select(MatchGetModel.Projection).FirstOrDefaultAsync(match => match.Opponent == opponent);
             return Ok(match);
         }
 

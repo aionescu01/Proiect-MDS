@@ -8,6 +8,7 @@ namespace ProjectV1.DAL.Models
 {
     public class MatchPostModel
     {
+        public int StadiumId { get; set; }
         public string Opponent { get; set; }
 
         public string Competition { get; set; }
