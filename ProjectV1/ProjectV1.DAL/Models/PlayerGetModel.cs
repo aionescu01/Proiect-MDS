@@ -23,8 +23,6 @@ namespace ProjectV1.DAL.Models
         public static Expression<Func<Entities.Player, PlayerGetModel>> Projection => player => new PlayerGetModel()
         {
             Id = player.Id,
-            //LastName = player.LastName,
-            //Name = $"{player.FirstName} {player.LastName}",
             Name = player.Name,
             Nationality = player.Nationality,
             Birth_Date = player.Birth_Date,
