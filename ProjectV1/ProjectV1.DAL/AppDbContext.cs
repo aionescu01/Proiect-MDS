@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProjectV1.DAL.Entities;
-
+using ProjectV1.DAL.Entities.Auth;
 
 namespace ProjectV1.DAL
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<
+       User,
+       Role,
+       int,
+       IdentityUserClaim<int>,
+       UserRole,
+       IdentityUserLogin<int>,
+       IdentityRoleClaim<int>,
+       IdentityUserToken<int>>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

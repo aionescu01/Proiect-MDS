@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
         "projectName": "ProjectV1.DAL",
-        "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,14 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.15, )"
             },
@@ -84,17 +92,17 @@
         }
       }
     },
-    "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
-        "projectName": "ProjectV1",
-        "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1\\obj\\",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
+        "projectName": "ProjectV1.Services",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,8 +116,69 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
-                "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+        "projectName": "ProjectV1",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+              },
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj"
               }
             }
           }

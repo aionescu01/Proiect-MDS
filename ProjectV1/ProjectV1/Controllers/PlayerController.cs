@@ -12,6 +12,7 @@ using System.Web;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -26,7 +27,7 @@ namespace ProjectV1.Controllers
             _context = context;
         }
 
-        [HttpPost("add one player")]
+        [HttpPost("add-one-player"), Authorize(Roles = "Owner, Manager")]
         public async Task<IActionResult> CreatePlayer(PlayerPostModel model)
         {
             var player = new Player()
@@ -99,7 +100,7 @@ namespace ProjectV1.Controllers
         public async Task<IActionResult> GetDriverById(string name)
         {
             //System.Console.WriteLine()
-            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.LastName == name);
+            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name == name);
             //var player = await _context.Players.FirstOrDefaultAsync(player => player.LastName == name);
             return Ok(player);
         }

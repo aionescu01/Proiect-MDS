@@ -3,12 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectV1", "ProjectV1\ProjectV1.csproj", "{955C8AA3-FF12-4374-8E29-B042A83BA14B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectV1", "ProjectV1\ProjectV1.csproj", "{955C8AA3-FF12-4374-8E29-B042A83BA14B}"
 	ProjectSection(ProjectDependencies) = postProject
+		{28A2F682-DE87-4306-ACF4-FCA538649DAF} = {28A2F682-DE87-4306-ACF4-FCA538649DAF}
 		{390C94EE-6C39-4246-B052-EDAA1E6C939D} = {390C94EE-6C39-4246-B052-EDAA1E6C939D}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectV1.DAL", "ProjectV1.DAL\ProjectV1.DAL.csproj", "{390C94EE-6C39-4246-B052-EDAA1E6C939D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectV1.DAL", "ProjectV1.DAL\ProjectV1.DAL.csproj", "{390C94EE-6C39-4246-B052-EDAA1E6C939D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectV1.Services", "ProjectV1.Services\ProjectV1.Services.csproj", "{28A2F682-DE87-4306-ACF4-FCA538649DAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +27,10 @@ Global
 		{390C94EE-6C39-4246-B052-EDAA1E6C939D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{390C94EE-6C39-4246-B052-EDAA1E6C939D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{390C94EE-6C39-4246-B052-EDAA1E6C939D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A2F682-DE87-4306-ACF4-FCA538649DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A2F682-DE87-4306-ACF4-FCA538649DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A2F682-DE87-4306-ACF4-FCA538649DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A2F682-DE87-4306-ACF4-FCA538649DAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
