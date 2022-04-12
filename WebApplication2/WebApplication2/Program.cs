@@ -6,34 +6,38 @@ using System.Web;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
 
-
 namespace WebScraper
 {
-    class Program
-    {
+    public class Class1
+{
         static void Main(string[] args)
         {
-            var html = GetHtml("https://www.transfermarkt.com/fc-barcelona/mitarbeiter/verein/131");
+            var html = GetHtml("https://salarysport.com/football/la-liga/barcelona");
             var data = ParseHtmlUsingHtmlAgilityPack(html);
+            html = GetHtml("https://www.transfermarkt.com/fc-barcelona/berateruebersicht/verein/131/plus/1");
             var data2 = ParseHtmlUsingHtmlAgilityPack2(html);
             var x = 1;
+            //data.Sort();
 
             using (StreamWriter writetext = new StreamWriter("write.txt"))
             {
-                foreach (var i in data) 
+                foreach (var i in data)
                 {
+
                     foreach (var j in data2)
                     {
                         if (j.name == i.name)
                         {
-                            System.Console.WriteLine(i.name + " " + i.role + " " + j.start + " " + j.end);
-                            writetext.WriteLine(i.name + " " + i.role + " " + j.start + " " + j.end);
+                            DateTime joindate = DateTime.Parse(j.joined);
+                            DateTime enddate = DateTime.Parse(j.end_date);
+                            System.Console.WriteLine(i.name + " " + i.salary + " " + joindate + " " + enddate + " agent: " + j.agent);
+                            writetext.WriteLine(i.name + " " + i.salary + " " + joindate + " " + enddate + " agent: " + j.agent);
                         }
                     }
 
                 }
 
-            }   
+            }
         }
 
         private static string GetHtml(string link)
@@ -51,7 +55,7 @@ namespace WebScraper
             return chrome.PageSource;
         }
 
-        private static List<(string name, string role)> ParseHtmlUsingHtmlAgilityPack(string html)
+        private static List<(string name, string salary)> ParseHtmlUsingHtmlAgilityPack(string html)
         {
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
@@ -59,33 +63,28 @@ namespace WebScraper
             var repositories =
                 htmlDoc
                     .DocumentNode
-                    .SelectNodes("//div[@class='box']/table[1]");
-                    //.SelectNodes("div[@class='row']/div/div");
-                    //.SelectNodes("div[@class='stickyContent stickySubnavigation']");
+                    .SelectNodes("//table[@class='Table__TableStyle-sc-373fc0-0 koTFEC']/tbody/tr");
 
 
-            List <(string name, string role)> data = new();
+
+            List<(string name, string salary)> data = new();
 
             foreach (var repo in repositories)
             {
-                var emp = repo.SelectSingleNode(".//tbody");
-                var y = emp.Elements("tr");
-                foreach (var x in y)
+                if (repo.SelectSingleNode(".//td[1]").InnerText != "")
                 {
-                    var name = x.SelectSingleNode(".//td[@class='hauptlink']/a").InnerText;
-                    name = name.Replace("\r\n", "");
-                    name = name.Replace("&nbsp;", "");
-                    name = name.TrimStart(' ');
-                    name = name.TrimEnd(' ');
-                    var role = x.SelectSingleNode(".//tr[2]/td").InnerText;
-                    data.Add((name, role));
+                    var name = repo.SelectSingleNode(".//td[1]").InnerText;
+                    var salary = repo.SelectSingleNode(".//td[3]").InnerText;
+                    salary = salary.Replace("£", "");
+                    salary = salary.Replace(",", "");
+                    data.Add((name, salary));
                 }
+
             }
 
             return data;
         }
-
-        private static List<(string name, string start, string end)> ParseHtmlUsingHtmlAgilityPack2(string html)
+        private static List<(string name, string joined, string end_date, string agent)> ParseHtmlUsingHtmlAgilityPack2(string html)
         {
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
@@ -93,30 +92,30 @@ namespace WebScraper
             var repositories =
                 htmlDoc
                     .DocumentNode
-                    .SelectNodes("//div[@class='box']/table[1]");
+                    .SelectNodes("//div[@class='responsive-table']/div/table/tbody/tr");
 
 
-            List<(string name, string start, string end)> data = new();
+
+            List<(string name, string joined, string end_date, string agent)> data = new();
 
             foreach (var repo in repositories)
             {
-                var emp = repo.SelectSingleNode(".//tbody");
-                var y = emp.Elements("tr");
-                foreach (var x in y)
-                {
-                    var name = x.SelectSingleNode(".//td[@class='hauptlink']/a").InnerText;
-                    name = name.Replace("\r\n", "");
-                    name = name.Replace("&nbsp;", "");
-                    name = name.TrimStart(' ');
-                    name = name.TrimEnd(' ');
-                    var start = x.SelectSingleNode(".//td[4]").InnerText;
-                    var end = x.SelectSingleNode(".//td[5]").InnerText;
-                    end = end.Replace("\r\n", "");
-                    end = end.Replace("\t", "");
-                    end = end.TrimStart(' ');
-                    end = end.TrimEnd(' ');
-                    data.Add((name, start, end));
-                }
+                var name = repo.SelectSingleNode(".//td[@class='hauptlink']/a").InnerText;
+                name = name.Replace("\r\n", "");
+                name = name.Replace("&nbsp;", "");
+                name = name.TrimStart(' ');
+                name = name.TrimEnd(' ');
+
+                //var joined = repo.SelectSingleNode(".//td[5]").InnerText;
+                var joined = "-";
+                var end_date = "-";
+                //var end_date = repo.SelectSingleNode(".//td[6]").InnerText;
+                if (joined == "-")
+                    joined = "Jan 1, 1970";
+                if (end_date == "-")
+                    end_date = "Jan 1, 1970";
+                var agent = repo.SelectSingleNode(".//td[@class='rechts hauptlink']").InnerText;
+                data.Add((name, joined, end_date, agent));
             }
 
             return data;

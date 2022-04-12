@@ -64,9 +64,40 @@ namespace ProjectV1.Controllers
                 //writetext.WriteLine(i.name + " " + i.value + " " + i.position + " age " + i.age + " " + i.nationality);
                 //float val;
                 //System.Console.WriteLine(i);
+
                 Single.TryParse(i.value,  out float val);
-                DateTime oDate = DateTime.Parse(i.date_of_birth);
                 float hei = float.Parse(i.height, CultureInfo.InvariantCulture.NumberFormat);
+                Player player;
+                if (i.date_of_birth== "unknown")
+                {
+                    player = new Player()
+                    {
+
+                        Name = i.name,
+                        Nationality = i.nationality,
+                        Height = hei,
+                        Foot = i.foot,
+                        Position = i.position,
+                        Value = (decimal)val
+                    };
+                }
+                else
+                {
+                    DateTime oDate = DateTime.Parse(i.date_of_birth);
+                    player = new Player()
+                    {
+
+                        Name = i.name,
+                        Nationality = i.nationality,
+                        Birth_Date = oDate,
+                        Height = hei,
+                        Foot = i.foot,
+                        Position = i.position,
+                        Value = (decimal)val
+                    };
+                }
+                
+                /*
                 //float val = float.Parse(i.value, CultureInfo.InvariantCulture.NumberFormat);
                 System.Console.WriteLine(val);
                 var player = new Player()
@@ -81,6 +112,7 @@ namespace ProjectV1.Controllers
                 Position = i.position,
                 Value = (decimal)val
                 };
+                */
 
                 await _context.Players.AddRangeAsync(player);
                 await _context.SaveChangesAsync();
@@ -187,6 +219,16 @@ namespace ProjectV1.Controllers
                 height = height.Replace(",", ".");
                 var foot = node[3].InnerHtml;
 
+                if (foot == "&nbsp;" || foot == "-")
+                    foot = "unknown";
+                if (height == "&nbsp;" || height == "")
+                    height = "0";
+                if (position == "&nbsp;" || position == "-")
+                    position = "unknown";
+                if (nationality == "&nbsp;" || nationality == "-")
+                    nationality = "unknown";
+                if (date_of_birth == "&nbsp;" || date_of_birth == "-")
+                   date_of_birth = "unknown";
                 if (value.IndexOf('T') == -1)
                 {
                     value = value.Replace("€", "");

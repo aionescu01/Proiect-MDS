@@ -34,9 +34,13 @@ namespace ProjectV1.Controllers
             {
                 var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Name == i.name);
                 var id = staffmember.Id;
-                DateTime d1 = DateTime.Parse(i.start);
+                DateTime d1;
+                if (i.start is "unknown")
+                    d1 = DateTime.MinValue;
+                else
+                    d1 = DateTime.Parse(i.start);
                 DateTime d2;
-                if (i.end is "-")
+                if (i.end is "unknown")
                     d2 = DateTime.MaxValue;
                 else
                 d2 = DateTime.Parse(i.end);
@@ -68,21 +72,67 @@ namespace ProjectV1.Controllers
                 {
                     if (j.name == i.name)
                     {
-
-                        DateTime d1 = DateTime.Parse(j.joined);
-                        DateTime d2 = DateTime.Parse(j.end_date);
                         var player = await _context.Players.FirstOrDefaultAsync(player => player.Name == i.name);
                         var id = player.Id;
                         var sal = int.Parse(i.salary);
-                        var contract = new Contract()
+                        Contract contract;
+                        //de schimbat aici
+                        if (j.joined == "unknown" && j.end_date == "unknown")
                         {
-                            Start_date = d1,
-                            End_date = d2,
-                            Salary = sal,
-                            Agent = j.agent,
-                            PlayerId = id
+                            contract = new Contract()
+                            {
+                                End_date = DateTime.MaxValue,
+                                Salary = sal,
+                                Agent = j.agent,
+                                PlayerId = id
+                            };
+                        }
+                        else if(j.joined != "unknown" && j.end_date == "unknown")
+                        {
+                                DateTime d1 = DateTime.Parse(j.joined);
+                                contract = new Contract()
+                                {
+                                    Start_date = d1,
+                                    End_date = DateTime.MaxValue,
+                                    Salary = sal,
+                                    Agent = j.agent,
+                                    PlayerId = id
 
-                        };
+                                };
+                        }
+                        else if (j.joined == "unknown" && j.end_date != "unknown")
+                        {
+                            DateTime d2 = DateTime.Parse(j.end_date);
+                            contract = new Contract()
+                            {
+                                Start_date = DateTime.MinValue,
+                                End_date = d2,
+                                Salary = sal,
+                                Agent = j.agent,
+                                PlayerId = id
+
+
+                            };
+                        }
+                        else
+                            //(j.joined != "unknown" && j.end_date != "unknown")
+                        {
+                            DateTime d1 = DateTime.Parse(j.joined);
+                            DateTime d2 = DateTime.Parse(j.end_date);
+                            contract = new Contract()
+                            {
+                                Start_date = d1,
+                                End_date = d2,
+                                Salary = sal,
+                                Agent = j.agent,
+                                PlayerId = id
+
+                            };
+                        }
+                        //DateTime d1 = DateTime.Parse(j.joined);
+                        //DateTime d2 = DateTime.Parse(j.end_date);
+                        
+                        
                         await _context.Contracts.AddRangeAsync(contract);
                         await _context.SaveChangesAsync();
                         //System.Console.WriteLine(i.name + " " + i.salary + " " + j.joined + " " + j.end_date);
@@ -282,6 +332,11 @@ namespace ProjectV1.Controllers
                 name = name.TrimEnd(' ');
                 var joined = repo.SelectSingleNode(".//td[5]").InnerText;
                 var end_date = repo.SelectSingleNode(".//td[6]").InnerText;
+                if (joined == "-")
+                    joined = "unknown";
+                if (end_date == "-")
+                    end_date = "unknown";
+
                 var agent = repo.SelectSingleNode(".//td[@class='rechts hauptlink']").InnerText;
                 data.Add((name, joined, end_date, agent));
             }
@@ -319,6 +374,12 @@ namespace ProjectV1.Controllers
                     end = end.Replace("\t", "");
                     end = end.TrimStart(' ');
                     end = end.TrimEnd(' ');
+
+                    if (start == "-")
+                        start = "unknown";
+                    if (end == "-")
+                        end = "unknown";
+
                     data.Add((name, start, end));
                 }
             }
