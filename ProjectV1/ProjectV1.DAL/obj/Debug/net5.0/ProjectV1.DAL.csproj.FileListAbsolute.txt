@@ -27,3 +27,4 @@ C:\Users\LENOVO\Documents\GitHub\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\n
 C:\Users\LENOVO\Documents\GitHub\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ref\ProjectV1.DAL.dll
 C:\Users\LENOVO\Documents\GitHub\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.pdb
 C:\Users\LENOVO\Documents\GitHub\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.genruntimeconfig.cache
+C:\Users\alexa\Desktop\Proiect-MDS\ProjectV1\ProjectV1.DAL\obj\Debug\net5.0\ProjectV1.DAL.csproj.AssemblyReference.cache

@@ -243,7 +243,7 @@ namespace ProjectV1.Controllers
                 return Ok(stats);
             }
 
-        [HttpDelete]
+            [HttpDelete]
             public async Task<IActionResult> DeleteContracts()
             {
                 var contracts = await _context.Contracts.ToListAsync();

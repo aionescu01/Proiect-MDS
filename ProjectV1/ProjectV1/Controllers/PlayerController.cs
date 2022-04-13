@@ -132,7 +132,7 @@ namespace ProjectV1.Controllers
         public async Task<IActionResult> GetDriverById(string name)
         {
             //System.Console.WriteLine()
-            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name == name);
+            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name.ToLower().Contains(name.ToLower()));
             //var player = await _context.Players.FirstOrDefaultAsync(player => player.LastName == name);
             return Ok(player);
         }
@@ -158,6 +158,32 @@ namespace ProjectV1.Controllers
 
             return Ok();
         }
+
+        [HttpPut("put-by-id/{id}")]
+        public async Task<IActionResult> EditPlayer(int id, PlayerPostModel model)
+        {
+            var player = await _context.Players.FirstOrDefaultAsync(car => car.Id == id);
+
+            if (player == null)
+            {
+                return BadRequest($"The player with id {id} does not exist");
+            }
+
+
+            player.Name = model.Name;
+            player.Nationality = model.Nationality;
+            player.Birth_Date = model.Birth_Date;
+            player.Height = model.Height;
+            player.Foot = model.Foot;
+            player.Position = model.Position;
+            player.Value = model.Value;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        
 
 
         private static string GetHtml(string link)

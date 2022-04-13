@@ -8,7 +8,7 @@ namespace ProjectV1.DAL.Models
 {
     public class PlayerPostModel
     {
-        public string Link { get; set; }
+        //public string Link { get; set; }
         public string Name { get; set; }
         //public string FirstName { get; set; }
         //public string LastName { get; set; }
