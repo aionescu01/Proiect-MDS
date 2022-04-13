@@ -129,12 +129,17 @@ namespace ProjectV1.Controllers
             return Ok(players);
         }
         [HttpGet("get-by-name/{name}")]
-        public async Task<IActionResult> GetDriverById(string name)
+        public async Task<IActionResult> GetPlayersById(string name)
         {
-            //System.Console.WriteLine()
-            var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name.ToLower().Contains(name.ToLower()));
-            //var player = await _context.Players.FirstOrDefaultAsync(player => player.LastName == name);
-            return Ok(player);
+            List<PlayerGetModel> playerlist = new List<PlayerGetModel>();
+            var players = await _context.Players.Select(PlayerGetModel.Projection).ToListAsync();
+            foreach(var i in players)
+            {
+                if (i.Name.ToLower().Contains(name.ToLower()))
+                    playerlist.Add(i); 
+            }
+            //var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name.ToLower().Contains(name.ToLower()));
+            return Ok(playerlist);
         }
 
         [HttpDelete]
@@ -162,21 +167,27 @@ namespace ProjectV1.Controllers
         [HttpPut("put-by-id/{id}")]
         public async Task<IActionResult> EditPlayer(int id, PlayerPostModel model)
         {
-            var player = await _context.Players.FirstOrDefaultAsync(car => car.Id == id);
+            var player = await _context.Players.FirstOrDefaultAsync(player => player.Id == id);
 
             if (player == null)
             {
                 return BadRequest($"The player with id {id} does not exist");
             }
 
-
+            if(model.Name != null)
             player.Name = model.Name;
-            player.Nationality = model.Nationality;
-            player.Birth_Date = model.Birth_Date;
-            player.Height = model.Height;
-            player.Foot = model.Foot;
-            player.Position = model.Position;
-            player.Value = model.Value;
+            if (model.Nationality != null)
+                player.Nationality = model.Nationality;
+            if (model.Birth_Date != DateTime.MinValue)
+                player.Birth_Date = model.Birth_Date;
+            if (model.Height != 0)
+                player.Height = model.Height;
+            if (model.Foot != null)
+                player.Foot = model.Foot;
+            if (model.Position != null)
+                player.Position = model.Position;
+            if (model.Value != 0)
+                player.Value = model.Value;
 
             await _context.SaveChangesAsync();
 

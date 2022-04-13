@@ -211,8 +211,61 @@ namespace ProjectV1.Controllers
             [HttpGet("get-by-name/{name}")]
             public async Task<IActionResult> GetContractById(string name)
             {
-                var contract = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(contract => contract.LastName == name);
-                return Ok(contract);
+
+
+            List<PlayerGetModel> player = new List<PlayerGetModel>();
+                var players = await _context.Players.Select(PlayerGetModel.Projection).ToListAsync();
+                foreach (var i in players)
+                {
+                    if (i.Name.ToLower().Contains(name.ToLower()))
+                        player.Add(i);
+                }
+
+            var staffs = await _context.Staff.Select(StaffMemberGetModel.Projection).ToListAsync();
+            List<StaffMemberGetModel> staff = new List<StaffMemberGetModel>();
+            foreach (var j in staffs)
+            {
+                if (j.Name.ToLower().Contains(name.ToLower()))
+                    staff.Add(j);
+            }
+            //var player = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name.ToLower().Contains(name.ToLower()) );
+            //var staff = await _context.Staff.Select(StaffMemberGetModel.Projection).FirstOrDefaultAsync(staff => staff.Name.ToLower().Contains(name.ToLower()));
+
+
+            //ContractGetModel contract;
+            /*
+            if (player != null)
+            {
+                var playerid = player.Id;
+                contract = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(contract => contract.PlayerId == playerid);           
+            }
+            else
+            {
+                var staffid = staff.Id;
+                contract = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(contract => contract.StaffMemberId == staffid);
+            }*/
+            List<ContractGetModel> contract = new List<ContractGetModel>();
+            if (player != null)
+            {
+                foreach(var i in player)
+                { 
+                    var playerid = i.Id;
+                    var c = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(contract => contract.PlayerId == playerid);
+                    if(c!=null)
+                        contract.Add(c);
+                }
+            }
+            if(staff!=null)
+            {
+                foreach (var i in staff)
+                {
+                    var staffid = i.Id;
+                    var c = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(contract => contract.StaffMemberId == staffid);
+                    if (c != null)
+                        contract.Add(c);
+                }
+            }
+            return Ok(contract);
             }
 
 
@@ -259,6 +312,36 @@ namespace ProjectV1.Controllers
                 var contract = await _context.Contracts.FirstOrDefaultAsync(contract => contract.Id == id);
 
                 _context.Contracts.Remove(contract);
+                await _context.SaveChangesAsync();
+
+                return Ok();
+            }
+
+            [HttpPut("put-by-id/{id}")]
+            public async Task<IActionResult> EditContract(int id, ContractPostModel model)
+            {
+                var contract = await _context.Contracts.FirstOrDefaultAsync(contract => contract.Id == id);
+
+                if (contract == null)
+                {
+                    return BadRequest($"The contract with id {id} does not exist");
+                }
+
+                
+                if(model.Start_date != DateTime.MinValue)
+                    contract.Start_date = model.Start_date;
+                if (model.End_date != DateTime.MinValue)
+                    contract.End_date = model.End_date;
+                if (model.Salary != 0)
+                    contract.Salary = model.Salary;
+                if (model.Agent != null)
+                    contract.Agent = model.Agent;
+
+                if(model.PlayerId!=0)
+                contract.PlayerId = model.PlayerId;
+                if(model.StaffMemberId!=0)
+                contract.StaffMemberId = model.StaffMemberId;
+
                 await _context.SaveChangesAsync();
 
                 return Ok();

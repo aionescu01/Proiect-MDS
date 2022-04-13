@@ -78,8 +78,15 @@ namespace ProjectV1.Controllers
         [HttpGet("get-by-name/{name}")]
         public async Task<IActionResult> GetStaffMemberById(string name)
         {
-            var staffmember = await _context.Staff.Select(StaffMemberGetModel.Projection).FirstOrDefaultAsync(staffmember => staffmember.LastName == name);
-            return Ok(staffmember);
+            var staffs = await _context.Staff.Select(StaffMemberGetModel.Projection).ToListAsync();
+            List<StaffMemberGetModel> staff = new List<StaffMemberGetModel>();
+            foreach (var j in staffs)
+            {
+                if (j.Name.ToLower().Contains(name.ToLower()))
+                    staff.Add(j);
+            }
+            //var staffmember = await _context.Staff.Select(StaffMemberGetModel.Projection).FirstOrDefaultAsync(staffmember => staffmember.Name.ToLower().Contains(name.ToLower()));
+            return Ok(staff);
         }
 
         [HttpDelete("delete-by-id/{id}")]
@@ -99,6 +106,32 @@ namespace ProjectV1.Controllers
             var players = await _context.Staff.ToListAsync();
             foreach (var i in players)
                 _context.Staff.Remove(i);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpPut("put-by-id/{id}")]
+        public async Task<IActionResult> EditStaffMember(int id, StaffMemberPostModel model)
+        {
+            var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Id == id);
+
+            if (staffmember == null)
+            {
+                return BadRequest($"The staff member with id {id} does not exist");
+            }
+
+            if(model.Name != null)
+                staffmember.Name = model.Name;
+            if (model.Role != null)
+                staffmember.Role = model.Role;
+            if (model.Birth_Date != null)
+                staffmember.Birth_Date = model.Birth_Date;
+            if (model.Email != null)
+                staffmember.Email = model.Email;
+            if (model.Phone_Number != null)
+                staffmember.Phone_Number = model.Phone_Number;
+
             await _context.SaveChangesAsync();
 
             return Ok();
