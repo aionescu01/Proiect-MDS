@@ -9,6 +9,7 @@ using ProjectV1.DAL.Models;
 using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
+using System.Globalization;
 
 namespace ProjectV1.Controllers
 {
@@ -23,7 +24,7 @@ namespace ProjectV1.Controllers
                 _context = context;
             }
 
-            [HttpPost("Add staff")]
+            [HttpPost("add-staff")]
             public async Task<IActionResult> CreateStaffContracts(string Link)
             {
             var link = Link;
@@ -34,16 +35,20 @@ namespace ProjectV1.Controllers
             {
                 var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Name == i.name);
                 var id = staffmember.Id;
+                //CultureInfo invC = CultureInfo.InvariantCulture;
+                CultureInfo frFr = new CultureInfo("en-US");
                 DateTime d1;
-                if (i.start is "unknown")
+                var startdate = i.start.Replace(".", "/");
+                if (startdate is "unknown")
                     d1 = DateTime.MinValue;
                 else
-                    d1 = DateTime.Parse(i.start);
+                    d1 = DateTime.Parse(startdate, frFr);
                 DateTime d2;
-                if (i.end is "unknown")
+                var enddate = i.end.Replace(".", "/");
+                if (enddate is "unknown")
                     d2 = DateTime.MaxValue;
                 else
-                d2 = DateTime.Parse(i.end);
+                d2 = DateTime.Parse(enddate, frFr);
                 var contract = new Contract()
                 {
                     Start_date = d1,
@@ -57,7 +62,7 @@ namespace ProjectV1.Controllers
             return Ok();
         }
 
-            [HttpPost("Add players")]
+            [HttpPost("add-players")]
             public async Task<IActionResult> CreatePlayerContracts(string TransfermarktLink, string SalaryLink)
             {
             var link = SalaryLink;
@@ -144,7 +149,7 @@ namespace ProjectV1.Controllers
             return Ok();
         }
 
-            [HttpPost("add one contract")]
+            [HttpPost("add-one-contract")]
             public async Task<IActionResult> CreateContract(ContractPostModel model)
             {
 

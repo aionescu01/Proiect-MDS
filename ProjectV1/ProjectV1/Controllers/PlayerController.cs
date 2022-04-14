@@ -27,7 +27,7 @@ namespace ProjectV1.Controllers
             _context = context;
         }
 
-        [HttpPost("add-one-player"), Authorize(Roles = "Owner, Manager")]
+        [HttpPost("add-one-player")]
         public async Task<IActionResult> CreatePlayer(PlayerPostModel model)
         {
             var player = new Player()
