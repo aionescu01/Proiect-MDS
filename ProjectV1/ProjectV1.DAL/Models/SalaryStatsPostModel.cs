@@ -1,19 +1,16 @@
-﻿using ProjectV1.DAL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectV1.DAL.Entities
+namespace ProjectV1.DAL.Models
 {
-    public class SalaryStats
+    public class SalaryStatsPostModel
     {   
         public int id { get; set; }
         public int sum { get; set; }
         public int nrofplayers { get; set; }
         public double avgsalary { get; set; }
-
     }
 }

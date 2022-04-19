@@ -32,6 +32,8 @@ namespace ProjectV1.DAL
         public DbSet<MatchPlayer> MatchPlayers { get; set; }
         public DbSet<MatchStaff> MatchStaffs { get; set; }
 
+        public DbSet<SalaryStats> SalaryStats { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
