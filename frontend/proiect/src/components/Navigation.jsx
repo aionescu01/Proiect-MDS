@@ -1,14 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
+import {NavLink} from "react-router-dom";
+import './Navigation.css';
 function Navigation() {
   return (
-    <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div className="navigation ">
+      <nav className="navbar navbar-expand  ">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
-            React Multi-Page Website
-          </NavLink>
+
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -22,6 +20,21 @@ function Navigation() {
                   Players
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Staff">
+                  Staff
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Player_Contracts">
+                  Players Contract
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Staff_Contracts">
+                  Staff Contract
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -29,3 +42,4 @@ function Navigation() {
     </div>
   );
 }
+export default Navigation;

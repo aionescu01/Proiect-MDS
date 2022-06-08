@@ -1,0 +1,13 @@
+.create-form{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 30px;
+    background-color: #EEEEEE;
+    color: black;
+}
