@@ -6193,11 +6193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
       "projectName": "ProjectV1.DAL",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6274,7 +6274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

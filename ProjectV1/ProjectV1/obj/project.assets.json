@@ -828,7 +828,7 @@
           "lib/net5.0/WebDriver.dll": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {
+      "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -3135,10 +3135,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {
-      "sha512": "TGqy37Fn7QXfkOYSLHWorYTPJyeUA88FolgwdDZCafs//FqlTMet4zNGH4nGBOH/bjeWHHBmjmAwtpu/L4iQcg==",
+    "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+      "sha512": "021uEuHHgaZ9X2oSCaClBun+azybXg5lw/Pq79fc3D98X0oEpHPuXRTRthxzmqTwH6CGnRNfTvHMZ9xdvHDLzQ==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/102.0.5005.6102",
+      "path": "selenium.webdriver.chromedriver/99.0.4844.5100",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3147,10 +3147,9 @@
         "build/Selenium.WebDriver.ChromeDriver.targets",
         "driver/linux64/chromedriver",
         "driver/mac64/chromedriver",
-        "driver/mac64arm/chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512",
+        "selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -6561,7 +6560,7 @@
       "ProjectV1.DAL >= 1.0.0",
       "ProjectV1.Services >= 1.0.0",
       "Selenium.WebDriver >= 4.1.0",
-      "Selenium.WebDriver.ChromeDriver >= 102.0.5005.6102",
+      "Selenium.WebDriver.ChromeDriver >= 99.0.4844.5100",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -6571,11 +6570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
       "projectName": "ProjectV1",
-      "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+      "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6592,11 +6591,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
-              "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+            "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+              "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
             },
-            "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
-              "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj"
+            "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
+              "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj"
             }
           }
         }
@@ -6645,7 +6644,7 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[102.0.5005.6102, )"
+            "version": "[99.0.4844.5100, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -6670,7 +6669,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

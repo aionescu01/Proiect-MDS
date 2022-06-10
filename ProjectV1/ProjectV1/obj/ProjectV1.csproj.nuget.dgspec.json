@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
         "projectName": "ProjectV1.DAL",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -88,18 +88,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
         "projectName": "ProjectV1.Services",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
-                "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
               }
             }
           }
@@ -146,18 +146,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
         "projectName": "ProjectV1",
-        "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,11 +174,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
-                "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj"
               },
-              "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
-                "projectPath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj"
+              "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.Services\\ProjectV1.Services.csproj"
               }
             }
           }
@@ -227,7 +227,7 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[102.0.5005.6102, )"
+              "version": "[99.0.4844.5100, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -252,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
