@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o1oip5hR66q+0Y4+M70nqqtkhrdhfmfOxaCBz6453t1gKYU+8MvabGYZ6Jhh5ITGbrCugLbOUmvPy1Y6Z/W05Q==",
+  "dgSpecHash": "CnspFUlaY03Pvaynh0oUvfcvZKYLiiEzSS52zonTeS0jHuO58slGTNk2ZCjE8daZwnleL1fCTzRbGcu+3xAjQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -65,7 +65,7 @@
     "C:\\Users\\alexa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512",
-    "C:\\Users\\alexa\\.nuget\\packages\\selenium.webdriver.chromedriver\\99.0.4844.5100\\selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\selenium.webdriver.chromedriver\\102.0.5005.6102\\selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

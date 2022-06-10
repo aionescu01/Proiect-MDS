@@ -27,6 +27,7 @@ namespace ProjectV1.Controllers
             _context = context;
         }
 
+
         [HttpPost("add-one-player")]
         public async Task<IActionResult> CreatePlayer(PlayerPostModel model)
         {
@@ -42,6 +43,15 @@ namespace ProjectV1.Controllers
                 Position = model.Position,
                 Value = model.Value
             };
+
+            /*
+            var players = await _context.Players.Select(PlayerGetModel.Projection).FirstOrDefaultAsync(player => player.Name == model.Name);
+
+            if(players!=null)
+            {
+                throw new InvalidOperationException();
+            }
+            */
 
             await _context.Players.AddRangeAsync(player);
             await _context.SaveChangesAsync();
@@ -174,7 +184,7 @@ namespace ProjectV1.Controllers
                 return BadRequest($"The player with id {id} does not exist");
             }
 
-            if(model.Name != null)
+            if (model.Name != null)
             player.Name = model.Name;
             if (model.Nationality != null)
                 player.Nationality = model.Nationality;
@@ -205,6 +215,9 @@ namespace ProjectV1.Controllers
             };
 
             options.AddArguments("headless");
+
+            //modific link
+            link = System.Web.HttpUtility.UrlDecode(link);
 
             var chrome = new ChromeDriver(options);
             //chrome.Navigate().GoToUrl("https://www.transfermarkt.com/fc-barcelona/kader/verein/131/saison_id/2021/plus/1");

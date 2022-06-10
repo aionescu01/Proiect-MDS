@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mG9JvBz74+Nsxrar18l8ZVe2moXY1If8+4PlF8ZYE8/glMTxTtUDR8P8pMUZiuo+lqHLnnGq6HXb4s8etBPD0g==",
+  "dgSpecHash": "rx+O/0IM3c0K49xYt9QjHs+gbLSxeG0ElJZW2l7/v1PWxBz7wNBRYFQUH0oYnF0oxqS1q8v5eWB1GsY5KDBIqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\Proiect-MDS\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1.DAL\\ProjectV1.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
