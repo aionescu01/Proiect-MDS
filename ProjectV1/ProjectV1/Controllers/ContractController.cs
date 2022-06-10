@@ -35,8 +35,8 @@ namespace ProjectV1.Controllers
             {
                 var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Name == i.name);
                 var id = staffmember.Id;
-                //CultureInfo invC = CultureInfo.InvariantCulture;
-                CultureInfo frFr = new CultureInfo("en-US");
+                CultureInfo frFr = CultureInfo.InvariantCulture;
+                //CultureInfo frFr = new CultureInfo("en-US");
                 DateTime d1;
                 var startdate = i.start.Replace(".", "/");
                 if (startdate is "unknown")
@@ -63,12 +63,18 @@ namespace ProjectV1.Controllers
         }
 
             [HttpPost("add-players")]
-            public async Task<IActionResult> CreatePlayerContracts(string TransfermarktLink, string SalaryLink)
-            {
-            var link = SalaryLink;
+        //public async Task<IActionResult> CreatePlayerContracts(string TransfermarktLink, string SalaryLink)
+        public async Task<IActionResult> CreatePlayerContracts(string Links)
+        {
+            //primul link e ala cu salariile si al doilea e ala de la transfermarkt
+
+            Links = System.Web.HttpUtility.UrlDecode(Links);
+            var x = Links.LastIndexOf("http");
+            
+            var link = Links.Substring(0, x - 1);
             var html = GetHtml(link);
             var data = ParseHtmlUsingHtmlAgilityPack(html);
-            link = TransfermarktLink;
+            link = Links.Substring(x);
             html = GetHtml(link);
             var data2 = ParseHtmlUsingHtmlAgilityPack2(html);
             foreach (var i in data)
@@ -81,7 +87,6 @@ namespace ProjectV1.Controllers
                         var id = player.Id;
                         var sal = int.Parse(i.salary);
                         Contract contract;
-                        //de schimbat aici
                         if (j.joined == "unknown" && j.end_date == "unknown")
                         {
                             contract = new Contract()
@@ -206,7 +211,7 @@ namespace ProjectV1.Controllers
                 return Ok();
             }
 
-            [HttpGet]
+            [HttpGet("get-all-contracts")]
             public async Task<IActionResult> GetContracts()
             {
                 var contracts = await _context.Contracts.Select(ContractGetModel.Projection).ToListAsync();
@@ -274,7 +279,7 @@ namespace ProjectV1.Controllers
             }
 
 
-        [HttpGet("Players salary statistics")]
+        [HttpGet("salary-statistics")]
         public async Task<IActionResult> GetContractsStats()
         {
             int sum = 0;
@@ -301,7 +306,7 @@ namespace ProjectV1.Controllers
                 return Ok(stats);
             }
 
-            [HttpDelete]
+            [HttpDelete("delete-all-contracts")]
             public async Task<IActionResult> DeleteContracts()
             {
                 var contracts = await _context.Contracts.ToListAsync();

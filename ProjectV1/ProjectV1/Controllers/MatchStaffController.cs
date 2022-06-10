@@ -25,7 +25,7 @@ namespace ProjectV1.Controllers
 
 
 
-        [HttpPost("Add one relation Match-Staff")]
+        [HttpPost("add-matchstaff")]
         public async Task<IActionResult> CreateMatchStaffRelation(MatchStaffPostModel model)
         {
             var mp = new MatchStaff()
@@ -40,7 +40,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("get-all-matchstaff")]
         public async Task<IActionResult> GetMatchStaffRelation()
         {
             var mp = await _context.MatchStaffs.Select(MatchStaffGetModel.Projection).ToListAsync();
@@ -62,7 +62,7 @@ namespace ProjectV1.Controllers
             return Ok(mp);
         }
 
-        [HttpDelete]
+        [HttpDelete("delete-all-matchstaff")]
         public async Task<IActionResult> DeleteMatchStaffRelation()
         {
             var mp = await _context.MatchStaffs.ToListAsync();

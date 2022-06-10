@@ -25,7 +25,7 @@ namespace ProjectV1.Controllers
 
 
 
-        [HttpPost("Add one match")]
+        [HttpPost("add-match")]
         public async Task<IActionResult> CreateMatch(MatchPostModel model)
         {
             var match = new Match()
@@ -44,7 +44,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("get-all-matches")]
         public async Task<IActionResult> GetMatches()
         {
             var match = await _context.Matches.Select(MatchGetModel.Projection).ToListAsync();
@@ -59,7 +59,7 @@ namespace ProjectV1.Controllers
             return Ok(match);
         }
 
-        [HttpDelete]
+        [HttpDelete("delete-all-matches")]
         public async Task<IActionResult> DeleteMatches()
         {
             var matches = await _context.Matches.ToListAsync();

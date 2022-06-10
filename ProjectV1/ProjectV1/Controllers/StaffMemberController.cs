@@ -23,7 +23,7 @@ namespace ProjectV1.Controllers
             _context = context;
         }
 
-        [HttpPost]
+        [HttpPost("add-staff-by-link/{Link}")]
         public async Task<IActionResult> CreateStaffMembers(string Link)
         {
 
@@ -48,7 +48,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpPost("Add one staff member")]
+        [HttpPost("add-staff-member")]
         public async Task<IActionResult> CreateStaffMember(StaffMemberPostModel model)
         {
             var staffmember = new StaffMember()

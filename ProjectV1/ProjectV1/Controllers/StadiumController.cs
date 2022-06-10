@@ -25,7 +25,7 @@ namespace ProjectV1.Controllers
 
 
 
-        [HttpPost("Add one stadium")]
+        [HttpPost("add-stadium")]
         public async Task<IActionResult> CreateStadium(StadiumPostModel model)
         {
             var stadium = new Stadium()

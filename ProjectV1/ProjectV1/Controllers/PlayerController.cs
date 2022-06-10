@@ -60,7 +60,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("add-players-by-link/{Link}")]
         public async Task<IActionResult> CreatePlayers(string Link)
         {
 
@@ -131,7 +131,7 @@ namespace ProjectV1.Controllers
             return Ok();
         }
 
-        [HttpGet]
+        [HttpGet("get-players")]
         public async Task<IActionResult> GetPlayers()
         {
             var players = await _context.Players.Select(PlayerGetModel.Projection).ToListAsync();
@@ -152,7 +152,7 @@ namespace ProjectV1.Controllers
             return Ok(playerlist);
         }
 
-        [HttpDelete]
+        [HttpDelete("delete-players")]
         public async Task<IActionResult> DeletePlayers()
         {
             var players = await _context.Players.ToListAsync();
