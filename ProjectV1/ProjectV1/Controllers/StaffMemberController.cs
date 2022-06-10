@@ -146,6 +146,8 @@ namespace ProjectV1.Controllers
 
             options.AddArguments("headless");
 
+            link = System.Web.HttpUtility.UrlDecode(link);
+
             var chrome = new ChromeDriver(options);
             chrome.Navigate().GoToUrl(link);
 
