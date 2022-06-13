@@ -9,6 +9,7 @@ using ProjectV1.DAL.Models;
 using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -23,8 +24,10 @@ namespace ProjectV1.Controllers
             _context = context;
         }
 
-        [HttpPost("add-staff-by-link/{Link}")]
-        public async Task<IActionResult> CreateStaffMembers(string Link)
+        [HttpPost("add-staff-by-link")]
+        [Authorize(Roles = "Owner")]
+
+        public async Task<IActionResult> CreateStaffMembers([FromBody] string Link)
         {
 
             var link = Link;
@@ -49,6 +52,8 @@ namespace ProjectV1.Controllers
 
 
         [HttpPost("add-staff-member")]
+        [Authorize(Roles = "Owner")]
+
         public async Task<IActionResult> CreateStaffMember(StaffMemberPostModel model)
         {
             var staffmember = new StaffMember()
@@ -90,6 +95,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-id/{id}")]
+        [Authorize(Roles = "Owner")]
+
         public async Task<IActionResult> DeleteStaffMember(int id)
         {
             var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Id == id);
@@ -100,7 +107,9 @@ namespace ProjectV1.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("delete-all-staff")]
+        [Authorize(Roles = "Owner")]
+
         public async Task<IActionResult> DeleteStaffMembers()
         {
             var players = await _context.Staff.ToListAsync();
@@ -112,11 +121,12 @@ namespace ProjectV1.Controllers
         }
 
         [HttpPut("put-by-id/{id}")]
+        [Authorize(Roles = "Owner")]
+
         public async Task<IActionResult> EditStaffMember(int id, StaffMemberPostModel model)
         {
             var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Id == id);
-
-            if (staffmember == null)
+            
             {
                 return BadRequest($"The staff member with id {id} does not exist");
             }

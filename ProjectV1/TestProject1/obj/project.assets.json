@@ -1303,7 +1303,7 @@
       "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {
         "type": "package",
         "build": {
-          "build/_._": {}
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
       "Swashbuckle.AspNetCore/5.6.3": {
@@ -9376,6 +9376,7 @@
       "ProjectV1 >= 1.0.0",
       "ProjectV1.DAL >= 1.0.0",
       "ProjectV1.Services >= 1.0.0",
+      "Selenium.WebDriver.ChromeDriver >= 102.0.5005.6102",
       "System.Configuration.ConfigurationManager >= 6.0.0",
       "coverlet.collector >= 3.0.2",
       "xunit >= 2.4.1",
@@ -9434,6 +9435,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.9.4, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[102.0.5005.6102, )"
           },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",

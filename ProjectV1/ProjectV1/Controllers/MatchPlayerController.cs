@@ -9,6 +9,7 @@ using ProjectV1.DAL.Models;
 using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -26,6 +27,8 @@ namespace ProjectV1.Controllers
 
 
         [HttpPost("add-matchplayer")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> CreateMatchPlayerRelation(MatchPlayerPostModel model)
         {
             var mp = new MatchPlayer()
@@ -63,6 +66,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-all-matchplayers")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteMatchPlayerRelation()
         {
             var mp = await _context.MatchPlayers.ToListAsync();
@@ -74,6 +79,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-PlayerId/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteMatchPlayerByPlayerId(int id)
         {
             var md = await _context.MatchPlayers.FirstOrDefaultAsync(md => md.PlayerId == id);
@@ -85,6 +92,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-MatchId/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteMatchPlayerByMatchId(int id)
         {
             var md = await _context.MatchPlayers.FirstOrDefaultAsync(md => md.MatchId == id);

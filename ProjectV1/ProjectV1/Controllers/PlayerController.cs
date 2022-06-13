@@ -29,6 +29,7 @@ namespace ProjectV1.Controllers
 
 
         [HttpPost("add-one-player")]
+        [Authorize(Roles ="Owner, Manager")]
         public async Task<IActionResult> CreatePlayer(PlayerPostModel model)
         {
             var player = new Player()
@@ -60,12 +61,14 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpPost("add-players-by-link/{Link}")]
-        public async Task<IActionResult> CreatePlayers(string Link)
+        [HttpPost("add-players-by-link")]
+        [Authorize(Roles = "Owner, Manager")]
+        public async Task<IActionResult> CreatePlayers([FromBody] string Link)
         {
 
-            var link = Link;
-            var html = GetHtml(link);
+            //var link = "https%3A%2F%2Fwww.transfermarkt.com%2Ffc-barcelona%2Fberateruebersicht%2Fverein%2F131%2Fplus%2F1";
+            
+            var html = GetHtml(Link);
             var data = ParseHtmlUsingHtmlAgilityPack(html);
 
             foreach (var i in data)
@@ -132,12 +135,37 @@ namespace ProjectV1.Controllers
         }
 
         [HttpGet("get-players")]
+
         public async Task<IActionResult> GetPlayers()
         {
             var players = await _context.Players.Select(PlayerGetModel.Projection).ToListAsync();
 
             return Ok(players);
         }
+
+        [HttpGet("player-stats")]
+
+        public async Task<IActionResult> PlayerStats()
+        {
+            Dictionary<string, int> positions = new Dictionary<string, int>();
+            var players = await _context.Players.Select(PlayerGetModel.Projection).ToListAsync();
+            foreach (var i in players)
+            {
+                try
+                {
+                    var x = positions[i.Position];
+                    x++;
+                    positions[i.Position] = x;
+                }
+                catch (KeyNotFoundException)
+                {
+                    positions[i.Position] = 1;
+                }
+            }
+
+            return Ok(positions);
+        }
+
         [HttpGet("get-by-name/{name}")]
         public async Task<IActionResult> GetPlayersById(string name)
         {
@@ -153,6 +181,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-players")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeletePlayers()
         {
             var players = await _context.Players.ToListAsync();
@@ -164,6 +194,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeletePlayer(int id)
         {
             var player = await _context.Players.FirstOrDefaultAsync(player => player.Id == id);
@@ -175,6 +207,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpPut("put-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> EditPlayer(int id, PlayerPostModel model)
         {
             var player = await _context.Players.FirstOrDefaultAsync(player => player.Id == id);
@@ -220,8 +254,7 @@ namespace ProjectV1.Controllers
             link = System.Web.HttpUtility.UrlDecode(link);
 
             var chrome = new ChromeDriver(options);
-            //chrome.Navigate().GoToUrl("https://www.transfermarkt.com/fc-barcelona/kader/verein/131/saison_id/2021/plus/1");
-            //chrome.Navigate().GoToUrl("https://www.transfermarkt.com/manchester-city/kader/verein/281/saison_id/2021/plus/1");
+
             chrome.Navigate().GoToUrl(link);
 
             return chrome.PageSource;

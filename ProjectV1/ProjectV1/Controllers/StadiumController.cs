@@ -9,6 +9,7 @@ using ProjectV1.DAL.Models;
 using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -26,6 +27,8 @@ namespace ProjectV1.Controllers
 
 
         [HttpPost("add-stadium")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> CreateStadium(StadiumPostModel model)
         {
             var stadium = new Stadium()
@@ -43,7 +46,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("get-stadiums")]
         public async Task<IActionResult> GetStadiums()
         {
             var stadium = await _context.Stadiums.Select(StadiumGetModel.Projection).ToListAsync();
@@ -58,7 +61,35 @@ namespace ProjectV1.Controllers
             return Ok(stadium);
         }
 
-        [HttpDelete]
+        [HttpPut("put-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
+        public async Task<IActionResult> EditPlayer(int id, StadiumPostModel model)
+        {
+            var stadium = await _context.Stadiums.FirstOrDefaultAsync(stadium => stadium.Id == id);
+
+            if (stadium == null)
+            {
+                return BadRequest($"The player with id {id} does not exist");
+            }
+
+            if (model.Name != "")
+                stadium.Name = model.Name;
+            if (model.Capacity != 0)
+                stadium.Capacity = model.Capacity;
+            if (model.Surface != "")
+                stadium.Surface = model.Surface;
+            if (model.Address != "")
+                stadium.Address = model.Address;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("delete-stadiums")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteStadiums()
         {
             var stadiums = await _context.Stadiums.ToListAsync();
@@ -70,6 +101,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteStadiums(int id)
         {
             var stadium = await _context.Stadiums.FirstOrDefaultAsync(stadium => stadium.Id == id);

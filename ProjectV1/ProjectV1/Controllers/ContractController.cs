@@ -10,6 +10,7 @@ using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -25,7 +26,9 @@ namespace ProjectV1.Controllers
             }
 
             [HttpPost("add-staff")]
-            public async Task<IActionResult> CreateStaffContracts(string Link)
+        [Authorize(Roles = "Owner")]
+
+        public async Task<IActionResult> CreateStaffContracts([FromBody] string Link)
             {
             var link = Link;
             var html = GetHtml(link);
@@ -35,8 +38,9 @@ namespace ProjectV1.Controllers
             {
                 var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Name == i.name);
                 var id = staffmember.Id;
-                CultureInfo frFr = CultureInfo.InvariantCulture;
+                //CultureInfo frFr = CultureInfo.InvariantCulture;
                 //CultureInfo frFr = new CultureInfo("en-US");
+                CultureInfo frFr = new CultureInfo("fr-FR");
                 DateTime d1;
                 var startdate = i.start.Replace(".", "/");
                 if (startdate is "unknown")
@@ -63,19 +67,31 @@ namespace ProjectV1.Controllers
         }
 
             [HttpPost("add-players")]
+        [Authorize(Roles = "Owner, Manager")]
         //public async Task<IActionResult> CreatePlayerContracts(string TransfermarktLink, string SalaryLink)
-        public async Task<IActionResult> CreatePlayerContracts(string Links)
+        public async Task<IActionResult> CreatePlayerContracts([FromBody] string Links)
         {
             //primul link e ala cu salariile si al doilea e ala de la transfermarkt
 
+            //toate astea 3 comentate
             Links = System.Web.HttpUtility.UrlDecode(Links);
             var x = Links.LastIndexOf("http");
-            
             var link = Links.Substring(0, x - 1);
+
+
+           // var html = GetHtml(SalaryLink);
+
+            //urmatorul de comentat
             var html = GetHtml(link);
+
             var data = ParseHtmlUsingHtmlAgilityPack(html);
+
+            //urm 2 de comentat
             link = Links.Substring(x);
             html = GetHtml(link);
+
+            //html = GetHtml(TransferMarktLink);
+
             var data2 = ParseHtmlUsingHtmlAgilityPack2(html);
             foreach (var i in data)
             {
@@ -155,7 +171,9 @@ namespace ProjectV1.Controllers
         }
 
             [HttpPost("add-one-contract")]
-            public async Task<IActionResult> CreateContract(ContractPostModel model)
+        [Authorize(Roles = "Owner")]
+
+        public async Task<IActionResult> CreateContract(ContractPostModel model)
             {
 
             var verif = await _context.Contracts.Select(ContractGetModel.Projection).FirstOrDefaultAsync(verif => verif.Id == model.PlayerId);
@@ -211,7 +229,35 @@ namespace ProjectV1.Controllers
                 return Ok();
             }
 
-            [HttpGet("get-all-contracts")]
+            [HttpGet("get-all-player-contracts")]
+            public async Task<IActionResult> GetPlayerContracts()
+            {
+                var contracts = await _context.Contracts.Select(ContractGetModel.Projection).ToListAsync();
+            List<ContractGetModel> contracte = new List<ContractGetModel>();
+                foreach(var i in contracts)
+            {
+                if (i.PlayerId != 0)
+                    contracte.Add(i);
+            }
+
+                return Ok(contracte);
+            }
+
+        [HttpGet("get-all-staff-contracts")]
+        public async Task<IActionResult> GetStaffContracts()
+        {
+            var contracts = await _context.Contracts.Select(ContractGetModel.Projection).ToListAsync();
+            List<ContractGetModel> contracte = new List<ContractGetModel>();
+            foreach (var i in contracts)
+            {
+                if (i.StaffMemberId != 0)
+                    contracte.Add(i);
+            }
+
+            return Ok(contracte);
+        }
+
+        [HttpGet("get-all-contracts")]
             public async Task<IActionResult> GetContracts()
             {
                 var contracts = await _context.Contracts.Select(ContractGetModel.Projection).ToListAsync();
@@ -286,6 +332,7 @@ namespace ProjectV1.Controllers
             int nrofplayers = 0;
             double avgsalary = 0;
             var contracts = await _context.Contracts.Select(ContractGetModel.Projection).ToListAsync();
+            
             foreach (var i in contracts)
             {
                 if (i.PlayerId != 0)
@@ -296,18 +343,26 @@ namespace ProjectV1.Controllers
             }
             avgsalary = sum / nrofplayers;
 
+            Dictionary<string, double> stats = new Dictionary<string, double>();
+            stats["number of players"] = nrofplayers;
+            stats["total salary"] = sum;
+            stats["average salary"] = avgsalary;
 
+/*
             var stats = new SalaryStats()
             {
                 sum = sum,
                 nrofplayers = nrofplayers,
                 avgsalary = avgsalary
             };
+*/
                 return Ok(stats);
             }
 
             [HttpDelete("delete-all-contracts")]
-            public async Task<IActionResult> DeleteContracts()
+        [Authorize(Roles = "Owner, Manager")]
+
+        public async Task<IActionResult> DeleteContracts()
             {
                 var contracts = await _context.Contracts.ToListAsync();
                 foreach (var i in contracts)
@@ -317,7 +372,9 @@ namespace ProjectV1.Controllers
                 return Ok();
             }
             [HttpDelete("delete-by-id/{id}")]
-            public async Task<IActionResult> DeleteContract(int id)
+        [Authorize(Roles = "Owner, Manager")]
+
+        public async Task<IActionResult> DeleteContract(int id)
             {
                 var contract = await _context.Contracts.FirstOrDefaultAsync(contract => contract.Id == id);
 
@@ -328,7 +385,9 @@ namespace ProjectV1.Controllers
             }
 
             [HttpPut("put-by-id/{id}")]
-            public async Task<IActionResult> EditContract(int id, ContractPostModel model)
+        [Authorize(Roles = "Owner, Manager")]
+
+        public async Task<IActionResult> EditContract(int id, ContractPostModel model)
             {
                 var contract = await _context.Contracts.FirstOrDefaultAsync(contract => contract.Id == id);
 

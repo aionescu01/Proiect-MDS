@@ -25,5 +25,6 @@ namespace ProjectV1.Controllers
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginModel model) => Ok(await _authService.Login(model));
+
     }
 }
