@@ -9,6 +9,7 @@ using ProjectV1.DAL.Models;
 using ProjectV1.DAL.Entities;
 using HtmlAgilityPack;
 using OpenQA.Selenium.Chrome;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectV1.Controllers
 {
@@ -25,7 +26,9 @@ namespace ProjectV1.Controllers
 
 
 
-        [HttpPost("Add one match")]
+        [HttpPost("add-match")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> CreateMatch(MatchPostModel model)
         {
             var match = new Match()
@@ -44,7 +47,7 @@ namespace ProjectV1.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("get-all-matches")]
         public async Task<IActionResult> GetMatches()
         {
             var match = await _context.Matches.Select(MatchGetModel.Projection).ToListAsync();
@@ -59,7 +62,41 @@ namespace ProjectV1.Controllers
             return Ok(match);
         }
 
-        [HttpDelete]
+
+        [HttpPut("put-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
+        public async Task<IActionResult> EditPlayer(int id, MatchPostModel model)
+        {
+            var match = await _context.Matches.FirstOrDefaultAsync(match => match.Id == id);
+
+            if (match == null)
+            {
+                return BadRequest($"The match with id {id} does not exist");
+            }
+
+            if (model.StadiumId != 0)
+                match.StadiumId = model.StadiumId;
+            if (model.Opponent != "")
+                match.Opponent = model.Opponent;
+            if (model.Event_date != DateTime.MinValue)
+                match.Event_date = model.Event_date;
+            if (model.Competition != "")
+                match.Competition = model.Competition;
+            if (model.Score != "")
+                match.Score = model.Score;
+            if (model.Referee != "")
+                match.Referee = model.Referee;
+
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("delete-all-matches")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteMatches()
         {
             var matches = await _context.Matches.ToListAsync();
@@ -71,6 +108,8 @@ namespace ProjectV1.Controllers
         }
 
         [HttpDelete("delete-by-id/{id}")]
+        [Authorize(Roles = "Owner, Manager")]
+
         public async Task<IActionResult> DeleteMatches(int id)
         {
             var match= await _context.Matches.FirstOrDefaultAsync(match => match.Id == id);

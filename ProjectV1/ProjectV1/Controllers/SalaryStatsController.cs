@@ -25,7 +25,7 @@ namespace ProjectV1.Controllers
 
 
 
-        [HttpPost("Add one Salary Stats")]
+        [HttpPost("add-salary-stats")]
         public async Task<IActionResult> CreateSalaryStats(SalaryStatsPostModel model)
         {
             var salaryStats = new SalaryStats()

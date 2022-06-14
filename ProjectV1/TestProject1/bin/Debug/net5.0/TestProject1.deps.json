@@ -12,6 +12,7 @@
           "ProjectV1": "1.0.0",
           "ProjectV1.DAL": "1.0.0",
           "ProjectV1.Services": "1.0.0",
+          "Selenium.WebDriver.ChromeDriver": "102.0.5005.6102",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "coverlet.collector": "3.0.2",
           "xunit": "2.4.1",
@@ -900,7 +901,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {},
+      "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {},
       "Swashbuckle.AspNetCore/5.6.3": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
@@ -1877,7 +1878,7 @@
           "ProjectV1.DAL": "1.0.0",
           "ProjectV1.Services": "1.0.0",
           "Selenium.WebDriver": "4.1.0",
-          "Selenium.WebDriver.ChromeDriver": "99.0.4844.5100",
+          "Selenium.WebDriver.ChromeDriver": "102.0.5005.6102",
           "Swashbuckle.AspNetCore": "5.6.3"
         },
         "runtime": {
@@ -2479,12 +2480,12 @@
       "path": "selenium.webdriver/4.1.0",
       "hashPath": "selenium.webdriver.4.1.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+    "Selenium.WebDriver.ChromeDriver/102.0.5005.6102": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-021uEuHHgaZ9X2oSCaClBun+azybXg5lw/Pq79fc3D98X0oEpHPuXRTRthxzmqTwH6CGnRNfTvHMZ9xdvHDLzQ==",
-      "path": "selenium.webdriver.chromedriver/99.0.4844.5100",
-      "hashPath": "selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512"
+      "sha512": "sha512-TGqy37Fn7QXfkOYSLHWorYTPJyeUA88FolgwdDZCafs//FqlTMet4zNGH4nGBOH/bjeWHHBmjmAwtpu/L4iQcg==",
+      "path": "selenium.webdriver.chromedriver/102.0.5005.6102",
+      "hashPath": "selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/5.6.3": {
       "type": "package",
