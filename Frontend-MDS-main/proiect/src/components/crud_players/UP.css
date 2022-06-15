@@ -1,0 +1,48 @@
+body{
+    background-color: #EEEEEE;
+    align-items: center;
+}
+/* .create-form{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-top: 100pxs;
+    
+    color: black;
+} */
+.b1{
+    text-align: right;
+    background-color: orange;
+    color: white;
+    padding: 10px 30px;
+    letter-spacing: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.ff{
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ddd;
+    border: none;
+    
+}
+.create-form{
+    letter-spacing: 1px;
+    display: flex; 
+    align-items: center;
+    color: black;
+    min-width: 135px; /* Needs to be set to longest label (to keep inputs in a straight vertical line) */
+    padding-right: 20px;
+    border: none;
+    border-bottom: 1px solid #888;
+    background: transparent;
+}
+
+
+

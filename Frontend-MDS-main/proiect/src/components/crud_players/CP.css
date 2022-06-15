@@ -1,0 +1,16 @@
+.create-form1{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 20px;
+    background-color: #00ADB5;
+    /* background-color: #EEEEEE; */
+    color: black;
+    border-radius: 15px;
+}
+

@@ -1,6 +1,8 @@
 # Proiect-MDS
 # Documentatia completa este disponibila in MAIN
 
+#Link-ul pentru demo este: https://youtu.be/P_KjmCSwueg
+
 # Source control
 
 Pentru a putea lucra eficient, am folosit Github pentru a ne sincroniza munca si a o putea separa pe branch-uri, dar si pentru a putea raporta bug-uri. Fiind impartiti pe doua grupe, una lucrand la backend si una la frontend, am creat doua repository-uri, unul pentru fiecare grupa.
