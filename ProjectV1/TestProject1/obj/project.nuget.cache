@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vtp6sJJS2R3IMibZhjfKJL3rAw/7TONOFpzESDbtR+P5y0KZPDQSHDla3X84SLma5EF9j5kgbcJItAPPyj1fBw==",
+  "dgSpecHash": "h7884y2Dk8yRHBTI5qN3tQi69y1LLhiMwJ+6JccIxZP171VXTjVqJTf3RVkxVMKMusHWXzNN+59WiUSUbRxeAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\TestProject1\\TestProject1.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\Desktop\\MDS FINAL\\Proiect-MDS-main\\ProjectV1\\TestProject1\\TestProject1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",

@@ -126,7 +126,7 @@ namespace ProjectV1.Controllers
         public async Task<IActionResult> EditStaffMember(int id, StaffMemberPostModel model)
         {
             var staffmember = await _context.Staff.FirstOrDefaultAsync(staffmember => staffmember.Id == id);
-            
+            if(staffmember==null)
             {
                 return BadRequest($"The staff member with id {id} does not exist");
             }

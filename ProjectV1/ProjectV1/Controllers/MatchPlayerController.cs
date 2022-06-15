@@ -54,7 +54,7 @@ namespace ProjectV1.Controllers
         [HttpGet("get-by-MatchId")]
         public async Task<IActionResult> GetMatchPlayerByMatchId(int id)
         {
-            var matchplayer = await _context.MatchPlayers.Select(MatchPlayerGetModel.Projection).FirstOrDefaultAsync(matchplayer => matchplayer.MatchId == id);
+            var matchplayer = await _context.MatchPlayers.Select(MatchPlayerGetModel.Projection).Where(matchplayer => matchplayer.MatchId == id).ToListAsync();
             return Ok(matchplayer);
         }
 

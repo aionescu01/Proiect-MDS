@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CnspFUlaY03Pvaynh0oUvfcvZKYLiiEzSS52zonTeS0jHuO58slGTNk2ZCjE8daZwnleL1fCTzRbGcu+3xAjQQ==",
+  "dgSpecHash": "mNcwhSCKQ2+nccEGWTSFn+TLSmY3NTJt8oF1g3VU41zTOoZfSXpQ/kpIqGsSym9IaDSYBbEgsTYX2MbYgH/LVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\Desktop\\MDS FINAL\\Proiect-MDS-main\\ProjectV1\\ProjectV1\\ProjectV1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

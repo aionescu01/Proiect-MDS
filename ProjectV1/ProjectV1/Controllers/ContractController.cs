@@ -344,9 +344,9 @@ namespace ProjectV1.Controllers
             avgsalary = sum / nrofplayers;
 
             Dictionary<string, double> stats = new Dictionary<string, double>();
-            stats["number of players"] = nrofplayers;
-            stats["total salary"] = sum;
-            stats["average salary"] = avgsalary;
+            stats["Number of players"] = nrofplayers;
+            stats["Total salary"] = sum;
+            stats["Average salary"] = avgsalary;
 
 /*
             var stats = new SalaryStats()
@@ -405,12 +405,12 @@ namespace ProjectV1.Controllers
                     contract.Salary = model.Salary;
                 if (model.Agent != null)
                     contract.Agent = model.Agent;
-
+                /*
                 if(model.PlayerId!=0)
                 contract.PlayerId = model.PlayerId;
                 if(model.StaffMemberId!=0)
                 contract.StaffMemberId = model.StaffMemberId;
-
+                */
                 await _context.SaveChangesAsync();
 
                 return Ok();
