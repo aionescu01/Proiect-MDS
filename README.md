@@ -1,4 +1,5 @@
 # Proiect-MDS
+# Documentatia completa este disponibila in MAIN
 
 # Source control
 
