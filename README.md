@@ -1,7 +1,7 @@
 # Proiect-MDS
 # Documentatia completa este disponibila in MAIN
 
-#Link-ul pentru demo este: https://youtu.be/P_KjmCSwueg
+# Link-ul pentru demo este: https://youtu.be/P_KjmCSwueg
 
 # Source control
 
