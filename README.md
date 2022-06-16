@@ -2,6 +2,7 @@
 # Documentatia completa este disponibila in MAIN
 
 # Link-ul pentru demo este: https://youtu.be/P_KjmCSwueg
+# Link-ul repo-ului de frontend: https://github.com/aionescu01/Frontend-MDS
 
 # Source control
 
