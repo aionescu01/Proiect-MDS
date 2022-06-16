@@ -45,6 +45,8 @@ In cazul programului nostru, unit testing-ul nu este foarte relevant, intrucat c
 
 # User stories
 ![User Stories](https://i.imgur.com/Mt774yx.png)
+https://yana5.atlassian.net/jira/software/projects/PMB/boards/2
 
 # Backlog
 ![Backlog](https://i.imgur.com/5lrBP8R.png)
+https://yana5.atlassian.net/jira/software/projects/MDS/boards/1
